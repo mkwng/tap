@@ -1,0 +1,66 @@
+
+.newsletter {
+  position:relative;
+  width:100%;
+  background:$darkGrey;
+  color:#ffffff;
+  font-size:0;
+  transition:background .2s;
+  &:hover {
+    background:lighten($darkGrey,10%);
+  }
+  > h4, > .description,> form{
+    display:inline-block;
+    overflow:hidden;
+    padding:$margin 0 $margin $margin;
+    vertical-align:middle;
+  }
+  > h4 {
+    @include font-head-small;
+    color:#ffffff;
+    width:25%;
+    .label {
+      @include font-label-small;
+      display:block;
+      color:$textDark-dark;
+    }
+  }
+  > .description {
+    width:40%;
+    @include font-text-small;
+    color:$textDark-light;
+    letter-spacing:.06em;
+  }
+  > form {
+    width:35%;
+    text-align:right;
+    input {
+      vertical-align:middle;
+    }
+    input[type="text"] {
+      @include font-text;
+      display:inline-block;
+      border:none;
+      width:60%;
+      line-height:42px;
+      height:42px;
+      padding:0 12px;
+    }
+    input[type="submit"] {
+      @extend .button;
+      @include text-replace;
+      padding:0;
+      // line-height:42px;
+      display:inline-block;
+      width:42px;
+      height:42px;
+      border:none;
+      margin-right:$margin;
+    }
+  }
+  > .close {
+    position:absolute;
+    top:0;
+    right:0;
+  }
+}
