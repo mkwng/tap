@@ -1,0 +1,126 @@
+.events {
+  article.event {
+    height:$articleHeight/1.5;
+    overflow:hidden;
+    border-bottom:1px solid #cccccc;
+  }
+  .article-date {
+    @include gradient($green-light,$green-dark);
+    float:left;
+    width:$colWidth/1.5;
+    height:$articleHeight/1.5;
+    &:hover {
+      background:$green-light;
+    }
+  }
+  .article-date-inner {
+    width:$colWidth/2.5;
+    height:$articleHeight/2.5;
+  }
+  .month {
+    @include font-label-large;
+    margin-top:$margin/2;
+  }
+  .date {
+    font-size:48px;
+  }
+  .article-text {
+    padding-top:$margin;
+    padding-left:$colWidth/1.5+$margin;
+      .article-img {
+        height:$articleHeight/1.5-$margin*2;
+        width:$colWidth/1.5-$margin*2;
+        margin:0 $margin 0;
+        float:right;
+        overflow:hidden;
+        background-position:50% 50%;
+        background-size:cover;
+        a {
+          display:block;
+          width:100%;
+          height:100%;
+        }
+      }
+      h4 {
+        @include font-title;
+        margin-bottom:$margin/4;
+      }
+      p.text-subtitle {
+        @include font-label;
+        margin-bottom:$margin/4;  
+      }
+  }
+}
+
+.event-details {
+  position:relative;
+  overflow:hidden;
+  .left,.right{
+    float:left;
+    width:49.999%;
+    height:400px;
+    text-align:center;
+    position:relative;
+    @include respond-to(phone) {
+      width:100%;
+    }
+  }
+  .left {
+    background-image: url(../img/map.jpg);
+    background-size:cover;
+    background-position:50% 50%;
+    a {
+      line-height:400px;
+      color:#ffffff;
+      @include gradient($green-dark,$green-light);
+      display:block;
+      width:100%;
+      height:100%;
+      opacity:0;
+      &:hover {
+        opacity:.8;
+      }
+    }
+  }
+  .right {
+    .details{
+      font-size:24px;
+      margin-bottom:24px;
+    }
+  }
+}
+
+.event-info {
+  background-color:#f0f0f0;
+}
+
+
+  .article-date {
+    color:$text;
+    display:block;
+    position:relative;
+    width:$colWidth/4;
+
+    margin:0 auto $margin auto;
+    height:$articleHeight/4;
+
+  }
+  .article-date-inner {
+    position:absolute;
+    width:$colWidth/4;
+    height:$articleHeight/4;
+    top:50%;
+    left:50%;
+    @include prefix(transform,translate3d(-50%,-50%,0));
+    text-align:center;
+    background:#ffffff;
+    border-top:10px solid $teal-dark;
+  }
+  .month {
+    @include font-label;
+    display:block;
+    margin-top:$margin/4;
+  }
+  .date {
+    font-size:32px;
+  }

@@ -6,6 +6,7 @@
   line-height:$navWidth;
   padding-left:$margin;
   border-bottom:5px solid $green;
+  position:relative;
   .categories {
     display:block;
     position:absolute;
@@ -164,7 +165,7 @@
     overflow:hidden;
     width:300%;
     height:320px;
-    transition:all .6s;
+    @include prefix(transition,all $duration);
     li {
       display:block;
       height:320px;
@@ -191,7 +192,7 @@
   h3 {
     @include font-head-large;
     color:#ffffff;
-      @media screen and (max-width: $break-small) {
+      @include respond-to(phone) {
         @include font-head;
       }
   }

@@ -4,120 +4,173 @@
   left:0;
   overflow:hidden;
   width:$navWidth;
+
   z-index:10;
   height:100%;
-  transition:width .5s;
-}
-nav {
-  position:absolute;
-  top:0;
-  left:0;
-  overflow-x:hidden;
-  overflow-y:scroll;
-  width:$navWidth*3 + 18px;
-  height:100%;
-  background:$grey;
-  h1 {
-    width:100%;
-    height:$navWidth;
-    margin:0 auto;
-    background:#ffffff;
-    a {
-      display:block;
-      width:100%;
-      height:100%;}
-    span {
-      display:block;
-      @include text-replace;
-      width:$navWidth;
-      height:100%;
-      background-image:url(../img/logo.png);
-      background-size:75%;
-      background-repeat:no-repeat;
-      background-position:50% 50%;
-      &:hover {
-        background-color:#fdfdfd;
-      }
-    }
-  }
-  ul.nav-primary {
-    display:block;
-    height:($navWidth) * 3;
-    margin-bottom:$margin;
-    li {
-      display:block;
+  @include prefix(transition,width $duration);
+  nav {
+    position:absolute;
+    top:0;
+    left:0;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    width:$navWidth*3 + 18px;
+    height:100%;
+    background:$grey;
+    h1 {
       width:100%;
       height:$navWidth;
-      // padding:0 10px 10px 10px;
-      &.active {
-        background:rgba(#000000,.2);
-      }
+      margin:0 auto;
+      background:#ffffff;
       a {
-        @include font-label-large;
-        color:rgba(#ffffff,.2);
         display:block;
         width:100%;
+        height:100%;}
+      span {
+        display:block;
+        @include text-replace;
+        width:$navWidth;
         height:100%;
-        position:relative;
-        line-height:$navWidth;
-        text-indent:$navWidth;
-        &::before {
-          content:"";
-          position:absolute;
-          display:block;
-          width:40px;
-          height:40px;
-          top:50%;
-          left:30px;
-          margin-top:-20px;
-          background:url(../img/nav-icon-sprite.png);
-          background-size:100%;
-          opacity:.2;
-        }
+        background-image:url(../img/logo.png);
+        background-size:75%;
+        background-repeat:no-repeat;
+        background-position:50% 50%;
         &:hover {
-          background:$lime-dark;
-          color:#ffffff;
-          &::before {opacity:1;}
+          background-color:#fdfdfd;
         }
-        &.about {
-          &::before {background-position:0px 0px;}
-          &:hover {background:$green}
+      }
+    }
+    ul.nav-primary {
+      display:block;
+      height:($navWidth) * 3;
+      margin-bottom:$margin;
+      li {
+        display:block;
+        width:100%;
+        height:$navWidth;
+        // padding:0 10px 10px 10px;
+        &.active {
+          background:rgba(#000000,.2);
         }
-        &.events {
-          &::before {background-position:0px -80px;}
-          &:hover {background:$teal-dark}
+        a {
+          @include font-label-large;
+          color:rgba(#ffffff,.2);
+          display:block;
+          width:100%;
+          height:100%;
+          position:relative;
+          line-height:$navWidth;
+          text-indent:$navWidth;
+          &::before {
+            content:"";
+            position:absolute;
+            display:block;
+            width:40px;
+            height:40px;
+            top:50%;
+            left:30px;
+            margin-top:-20px;
+            background:url(../img/nav-icon-sprite.png);
+            background-size:100%;
+            opacity:.2;
+          }
+          &:hover {
+            background:$lime-dark;
+            color:#ffffff;
+            &::before {opacity:1;}
+          }
+          &.about {
+            &::before {background-position:0px 0px;}
+            &:hover {background:$green}
+          }
+          &.events {
+            &::before {background-position:0px -80px;}
+            &:hover {background:$teal-dark}
+          }
+          &.articles {
+            &::before {background-position:0px -40px;}
+            &:hover {background:$lime}
+          }
         }
-        &.articles {
-          &::before {background-position:0px -40px;}
-          &:hover {background:$lime}
+      }
+    }
+
+    ul.nav-secondary {
+      pointer-events:none;
+      opacity:0;
+      @include prefix(transition,opacity $duration);
+      position:absolute;
+      li {
+        display:block;
+        width:100%;
+        height:48px;
+        overflow:hidden;
+        line-height:48px;
+        a {
+          @include font-label;
+          opacity:.2;
+          display:block;
+          width:1000px;
+          height:100%;
+          padding:0 $margin*1.5;
+          &:hover {
+            background:$green;
+            opacity:1;
+            color:#ffffff;
+          }
         }
       }
     }
   }
 
-  ul.nav-secondary {
-    pointer-events:none;
-    opacity:0;
-    transition:opacity .5s;
-    position:absolute;
-    li {
+  @include respond-to(tablet) {
+    width:0;
+  }
+}
+#hamburger {
+  display:none;
+  @include respond-to(tablet) {
+    display:block;
+    width:100%;
+    height:64px;
+    background-image:url(../img/logo.png);
+    background-size:$navWidth/1.25;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    a {
+      @include prefix(transition,opacity $duration);
+      opacity:.5;
       display:block;
-      width:100%;
-      height:48px;
-      overflow:hidden;
-      line-height:48px;
-      a {
-        @include font-label;
-        opacity:.2;
+      position:fixed;
+      width:44px;
+      height:44px;
+      margin:10px;
+      background:#ffffff;
+      @include prefix(border-radius,4px);
+      z-index:99;
+      @include font-label-small;
+      text-align:center;
+      line-height:66px;
+      &::after,&::before {
+        content:"";
         display:block;
-        width:1000px;
-        height:100%;
-        padding:0 $margin*1.5;
-        &:hover {
-          background:$green;
-          opacity:1;
-          color:#ffffff;
-        }
+        position:absolute;
+        width:16px;
+        left:14px;
+      }
+      &::after {
+        top:13px;
+        height:3px;
+        background:#999999;
+      }
+      &::before {
+        top:8px;
+        height:7px;
+        border-top:3px solid #999999;
+        border-bottom:3px solid #999999;
+      }
+      &:hover {
+        opacity:1;
       }
     }
   }

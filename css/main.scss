@@ -2,6 +2,20 @@
 @import "fonts";
 
 $break-small: 480px;
+$break-large: 1024px;
+
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
 
 $green: #009c83;
 $green-light: #00c4b5;
@@ -18,6 +32,8 @@ $navWidth: 100px;
 $colWidth:300px;
 $margin:24px;
 $articleHeight:300px;
+
+$duration:300ms;
 
 *,h1,h2,h3,h4,p,ul,ol,li{
   margin:0;
@@ -86,6 +102,10 @@ strong {
 #container {
   overflow:hidden;
   padding-left:$navWidth;
+  @include respond-to(tablet) {
+    padding-left:0px;
+    // padding-top:$navWidth/2;
+  }
 
   &::after {
     position:fixed;
@@ -97,7 +117,7 @@ strong {
     background:rgba(#000000,.5);
     content:"";
     opacity:0;
-    transition:opacity .5s;
+    @include prefix(transition, opacity $duration);
     pointer-events:none;
     z-index:9;
   }
@@ -111,70 +131,7 @@ strong {
 }
 
 
-.events {
-  article.event {
-    height:$articleHeight/1.5;
-    overflow:hidden;
-    border-bottom:1px solid #cccccc;
-  }
-  .article-date {
-    color:$text;
-    display:block;
-    position:relative;
-    width:$colWidth/1.5;
-    @include gradient($green-light,$green-dark);
-    float:left;
-    height:$articleHeight/1.5;
-    &:hover {
-      background:$green-light;
-    }
-  }
-  .article-date-inner {
-    position:absolute;
-    width:$colWidth/2.5;
-    height:$articleHeight/2.5;
-    top:50%;
-    left:50%;
-    @include prefix(transform,translate3d(-50%,-50%,0));
-    text-align:center;
-    background:#ffffff;
-    border-top:10px solid $teal-dark;
-  }
-  .month {
-    @include font-label-large;
-    display:block;
-    margin-top:$margin/2;
-  }
-  .date {
-    font-size:48px;
-  }
-  .article-text {
-    padding-top:$margin;
-    padding-left:$colWidth/1.5+$margin;
-      .article-img {
-        height:$articleHeight/1.5-$margin*2;
-        width:$colWidth/1.5-$margin*2;
-        margin:0 $margin 0;
-        float:right;
-        overflow:hidden;
-        background-position:50% 50%;
-        background-size:cover;
-        a {
-          display:block;
-          width:100%;
-          height:100%;
-        }
-      }
-      h4 {
-        @include font-title;
-        margin-bottom:$margin/4;
-      }
-      p.text-subtitle {
-        @include font-label;
-        margin-bottom:$margin/4;  
-      }
-  }
-}
+
 
 .social {
   width:100%;
@@ -258,4 +215,5 @@ section.about {
 @import "hero";
 @import "newsletter";
 @import "article";
+@import "event";
 @import "footer";
