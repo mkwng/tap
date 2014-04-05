@@ -131,7 +131,6 @@ section.events,section.articles {
         margin-bottom:$margin/4;
       }
       p.text-subtitle {
-        @include font-label;
         margin-bottom:$margin/4;  
       }
     }
@@ -165,7 +164,7 @@ section.events,section.articles {
     max-width:100%;
     // float:left;
     // padding-right:$margin;
-    font-size:14px;
+    font-size:16px;
     h3 {
       @include font-label-large;
       text-align:center;
@@ -178,13 +177,13 @@ section.events,section.articles {
       border-bottom:1px solid rgba($grey,.25);
       .article-img {
         width:$colWidth/2;
-        height:$colWidth/3;
+        height:$colWidth/2;
         float:left;
-        margin-right:$margin/2;
+        margin-right:$margin;
         margin-bottom:0;
       }
       h4 {
-        font-size:18px;
+        font-size:22px;
         font-weight:500;
       }
       p.text-subtitle {

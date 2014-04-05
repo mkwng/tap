@@ -74,3 +74,9 @@ $textDark-light: #999999;
   font-weight:400;
   letter-spacing:0;
 }
+
+
+
+p.text-subtitle {
+  @include font-label;
+}

@@ -90,10 +90,11 @@
   }
 }
 
-.event-info {
+
+.event-body {
+  @extend .article-body;
   background-color:#f0f0f0;
 }
-
 
   .article-date {
     color:$text;
@@ -124,3 +125,17 @@
   .date {
     font-size:32px;
   }
+
+
+
+.eventbrite {
+  h3 {
+    font-size:28px;
+    font-weight:300;
+    margin-bottom:48px;
+    text-align:center;
+  }
+  max-width:720px;
+  margin:0 auto;
+  padding:$margin*2 0 $margin 0;
+}

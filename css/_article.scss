@@ -1,5 +1,5 @@
 .article-intro {
-  padding: $margin*4;
+  padding: $margin $margin*4;
   line-height:1.8em;
   font-weight:300;
   letter-spacing:.025em;
@@ -8,10 +8,36 @@
   overflow:hidden;
   p{
     margin-bottom:$margin;
+    &:last-child {
+      margin-bottom:$margin/4;
+    }
   }
 }
 
 .article-body {
-  
+  @extend .article-intro;
+  background:#ffffff;
+  padding:$margin*4 $margin*2;
+  font-weight:400;
+
+  h3,p,ul {
+    margin:0 auto $margin;
+    max-width:720px;
+  }
+  img.full {
+    width:100%;
+    margin:0 0 $margin 0;
+  }
+
+  h3 {
+    @include font-head-small;
+    text-align:center;
+  }
+
+  @include respond-to(tablet) {
+    padding:$margin 0;
+    // h3,p,ul {margin:0 auto $margin;}
+    img.full {margin:0;}
+  }
 }
 

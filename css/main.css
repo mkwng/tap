@@ -114,6 +114,14 @@
     -o-transform: rotateZ(0deg);
     transform: rotateZ(0deg); } }
 
+p.text-subtitle {
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: "Montserrat"; }
+
 *, h1, h2, h3, h4, p, ul, ol, li {
   margin: 0;
   padding: 0;
@@ -624,12 +632,6 @@ section.events, section.articles {
         font-family: 'Lato', sans-serif;
         margin-bottom: 6px; }
       section.events .section-list article p.text-subtitle, section.events .section-page article p.text-subtitle, section.events section.articles .section-page article p.text-subtitle, section.articles section.events .section-page article p.text-subtitle, section.articles .section-list article p.text-subtitle, section.articles section.events .section-page article p.text-subtitle, section.events section.articles .section-page article p.text-subtitle, section.articles .section-page article p.text-subtitle {
-        color: #999999;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        font-weight: 700;
-        font-size: 12px;
-        font-family: "Montserrat";
         margin-bottom: 6px; }
     section.events .section-list article.col-2, section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles section.events .section-page article.col-2, section.articles .section-list article.col-2, section.articles section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles .section-page article.col-2 {
       background: #404040;
@@ -658,7 +660,7 @@ section.events, section.articles {
         color: #666666; }
   section.events .section-page, section.articles .section-page {
     max-width: 100%;
-    font-size: 14px; }
+    font-size: 16px; }
     section.events .section-page h3, section.articles .section-page h3 {
       color: #999999;
       text-transform: uppercase;
@@ -676,12 +678,12 @@ section.events, section.articles {
       border-bottom: 1px solid rgba(64, 64, 64, 0.25); }
       section.events .section-page article .article-img, section.events .section-page article.col-2 .article-img, section.articles .section-page article .article-img, section.articles .section-page article.col-2 .article-img {
         width: 150px;
-        height: 100px;
+        height: 150px;
         float: left;
-        margin-right: 12px;
+        margin-right: 24px;
         margin-bottom: 0; }
       section.events .section-page article h4, section.events .section-page article.col-2 h4, section.articles .section-page article h4, section.articles .section-page article.col-2 h4 {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 500; }
       section.events .section-page article p.text-subtitle, section.events .section-page article.col-2 p.text-subtitle, section.articles .section-page article p.text-subtitle, section.articles .section-page article.col-2 p.text-subtitle {
         color: #999999;
@@ -1190,16 +1192,41 @@ section.events, section.articles {
     top: 0;
     right: 0; }
 
-.article-intro, .boxes .box .box-hidden {
-  padding: 96px;
+.article-intro, .boxes .box .box-hidden, .article-body, .event-body {
+  padding: 24px 96px;
   line-height: 1.8em;
   font-weight: 300;
   letter-spacing: .025em;
   color: #000000;
   background-color: #f0f0f0;
   overflow: hidden; }
-  .article-intro p, .boxes .box .box-hidden p {
+  .article-intro p, .boxes .box .box-hidden p, .article-body p, .event-body p {
     margin-bottom: 24px; }
+    .article-intro p:last-child, .boxes .box .box-hidden p:last-child, .article-body p:last-child, .event-body p:last-child {
+      margin-bottom: 6px; }
+
+.article-body, .event-body {
+  background: #ffffff;
+  padding: 96px 48px;
+  font-weight: 400; }
+  .article-body h3, .event-body h3, .article-body p, .event-body p, .article-body ul, .event-body ul {
+    margin: 0 auto 24px;
+    max-width: 720px; }
+  .article-body img.full, .event-body img.full {
+    width: 100%;
+    margin: 0 0 24px 0; }
+  .article-body h3, .event-body h3 {
+    color: #333333;
+    font-weight: 300;
+    font-size: 32px;
+    font-family: "Lato";
+    font-size: 24px;
+    text-align: center; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .article-body, .event-body {
+      padding: 24px 0; }
+      .article-body img.full, .event-body img.full {
+        margin: 0; } }
 
 .events article.event {
   height: 200px;
@@ -1316,7 +1343,7 @@ section.events, section.articles {
     font-size: 24px;
     margin-bottom: 24px; }
 
-.event-info {
+.event-body {
   background-color: #f0f0f0; }
 
 .article-date {
@@ -1354,6 +1381,16 @@ section.events, section.articles {
 
 .date {
   font-size: 32px; }
+
+.eventbrite {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 0 24px 0; }
+  .eventbrite h3 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 48px;
+    text-align: center; }
 
 footer {
   background: black;
