@@ -17,7 +17,7 @@ $textDark-light: #999999;
   color:$text;
   font-weight:300;
   font-size:32px;
-  font-family:"Lato";
+  font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 @mixin font-head-large {
   @include font-head;
@@ -32,7 +32,7 @@ $textDark-light: #999999;
   color:$text;
   font-weight:500;
   font-size:22px;
-  font-family:'Lato', sans-serif;
+  font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 @mixin font-label {
@@ -41,7 +41,7 @@ $textDark-light: #999999;
   letter-spacing:.1em;
   font-weight:700;
   font-size:12px;
-  font-family:"Montserrat";
+  font-family:"Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 @mixin font-label-large {
   @include font-label;
@@ -56,7 +56,7 @@ $textDark-light: #999999;
   color:$text;
   font-weight:300;
   font-size:18px;
-  font-family:'Lato', sans-serif;
+  font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   @include pretty-text;
 }
 @mixin font-text-large {
@@ -70,13 +70,23 @@ $textDark-light: #999999;
 }
 
 @mixin font-alt {
-  font-family:"Montserrat";
+  font-family:"Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight:400;
   letter-spacing:0;
 }
+@mixin font-pullquote {
+  color:$text;
+  font-style:italic;
+  font-size:32px;
+  line-height:40px;
+  font-family: Georgia, Times, "Times New Roman", serif;  
+  @include pretty-text;
+}
 
 
-
-p.text-subtitle {
+.text-subtitle {
   @include font-label;
+}
+.text-pullquote {
+  @include font-pullquote;
 }

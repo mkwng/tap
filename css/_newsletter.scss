@@ -14,6 +14,8 @@
     overflow:hidden;
     padding:$margin 0 $margin $margin;
     vertical-align:middle;
+    height:120px;
+    @include prefix(transition,width $duration, padding $duration, opacity $duration);
   }
   > h4 {
     @include font-head-small;
@@ -33,9 +35,13 @@
   }
   > form {
     width:35%;
-    text-align:right;
+    // text-align:right;
     input {
       vertical-align:middle;
+      &:focus{
+        outline:none;
+        border:3px solid $green-light;
+      }
     }
     input[type="text"] {
       @include font-text;
@@ -49,6 +55,7 @@
     input[type="submit"] {
       @extend .button;
       @include text-replace;
+      @include prefix(transition,opacity $duration);
       padding:0;
       // line-height:42px;
       display:inline-block;
@@ -62,5 +69,26 @@
     position:absolute;
     top:0;
     right:0;
+  }
+
+  &.active {
+    > h4,> .description {
+      opacity:0;
+      width:0;
+      padding-right:0;
+      padding-left:0;
+    }
+    >form {
+
+      input[type="text"] {
+        width:30%;
+      }
+
+      width:100%;
+      input[type="submit"] {
+        pointer-events:none;
+        opacity:0;
+      }
+    }
   }
 }

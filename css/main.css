@@ -114,13 +114,26 @@
     -o-transform: rotateZ(0deg);
     transform: rotateZ(0deg); } }
 
-p.text-subtitle {
+.text-subtitle {
   color: #999999;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: 700;
   font-size: 12px;
-  font-family: "Montserrat"; }
+  font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.text-pullquote {
+  color: #333333;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 *, h1, h2, h3, h4, p, ul, ol, li {
   margin: 0;
@@ -137,7 +150,7 @@ body {
   color: #333333;
   font-weight: 300;
   font-size: 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -162,7 +175,7 @@ strong {
   letter-spacing: .1em;
   font-weight: 700;
   font-size: 12px;
-  font-family: "Montserrat";
+  font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   margin-bottom: 0px; }
 
 .button, section.events .more, section.articles .more, .newsletter > form input[type="submit"], .social a > form input[type="submit"] {
@@ -171,7 +184,7 @@ strong {
   letter-spacing: .1em;
   font-weight: 700;
   font-size: 12px;
-  font-family: "Montserrat";
+  font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   display: inline-block;
   padding: 18px 24px;
   background: #00b29e;
@@ -254,7 +267,7 @@ strong {
     letter-spacing: .1em;
     font-weight: 700;
     font-size: 12px;
-    font-family: "Montserrat";
+    font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 9px;
     height: 40px;
     width: 100%;
@@ -275,7 +288,7 @@ section.about {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 48px;
     color: white; }
   section.about p {
@@ -323,6 +336,11 @@ section.about {
         height: 100%; }
       .nav-wrapper nav h1 span {
         display: block;
+        -webkit-transition: opacity 300ms;
+        -moz-transition: opacity 300ms;
+        -ms-transition: opacity 300ms;
+        -o-transition: opacity 300ms;
+        transition: opacity 300ms;
         font-size: 0;
         text-indent: -9999999em;
         width: 100px;
@@ -340,18 +358,39 @@ section.about {
       .nav-wrapper nav ul.nav-primary li {
         display: block;
         width: 100%;
+        position: relative;
         height: 100px; }
+        .nav-wrapper nav ul.nav-primary li > span {
+          color: #999999;
+          text-transform: uppercase;
+          letter-spacing: .1em;
+          font-weight: 700;
+          font-size: 12px;
+          font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          font-size: 9px;
+          -webkit-transition: opacity 300ms;
+          -moz-transition: opacity 300ms;
+          -ms-transition: opacity 300ms;
+          -o-transition: opacity 300ms;
+          transition: opacity 300ms;
+          color: rgba(255, 255, 255, 0.5);
+          display: block;
+          position: absolute;
+          z-index: 2;
+          width: 100px;
+          text-align: center;
+          top: 66px; }
         .nav-wrapper nav ul.nav-primary li.active {
-          background: rgba(0, 0, 0, 0.2); }
+          background: rgba(0, 0, 0, 0.5); }
         .nav-wrapper nav ul.nav-primary li a {
           color: #999999;
           text-transform: uppercase;
           letter-spacing: .1em;
           font-weight: 700;
           font-size: 12px;
-          font-family: "Montserrat";
+          font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
           font-size: 16px;
-          color: rgba(255, 255, 255, 0.2);
+          color: rgba(255, 255, 255, 0.5);
           display: block;
           width: 100%;
           height: 100%;
@@ -359,6 +398,14 @@ section.about {
           line-height: 100px;
           text-indent: 100px; }
           .nav-wrapper nav ul.nav-primary li a::before {
+            -webkit-transition: transform 300ms ease-out;
+            -moz-transition: transform 300ms ease-out;
+            -ms-transition: transform 300ms ease-out;
+            -o-transition: transform 300ms ease-out;
+            transition: transform 300ms ease-out;
+            -webkit-transition: -webkit-transform 300ms ease-out;
+            -moz-transition: -moz-transform 300ms ease-out;
+            -o-transition: -o-transform 300ms ease-out;
             content: "";
             position: absolute;
             display: block;
@@ -366,10 +413,10 @@ section.about {
             height: 40px;
             top: 50%;
             left: 30px;
-            margin-top: -20px;
+            margin-top: -30px;
             background: url(../img/nav-icon-sprite.png);
             background-size: 100%;
-            opacity: .2; }
+            opacity: .5; }
           .nav-wrapper nav ul.nav-primary li a:hover {
             background: #80d680;
             color: #ffffff; }
@@ -408,31 +455,52 @@ section.about {
           letter-spacing: .1em;
           font-weight: 700;
           font-size: 12px;
-          font-family: "Montserrat";
-          opacity: .2;
+          font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          opacity: .5;
           display: block;
           width: 1000px;
           height: 100%;
-          padding: 0 36px; }
+          padding: 0 36px;
+          color: #ffffff; }
           .nav-wrapper nav ul.nav-secondary li a:hover {
             background: #009c83;
-            opacity: 1;
-            color: #ffffff; }
+            opacity: 1; }
   @media only screen and (min-width: 481px) and (max-width: 1023px) {
     .nav-wrapper {
       width: 0; } }
 
+.nav-wrapper.active {
+  width: 300px; }
+  .nav-wrapper.active nav ul.nav-primary li > span {
+    opacity: 0; }
+  .nav-wrapper.active nav ul.nav-primary li a::before {
+    -webkit-transform: translate3d(0, 10px, 0);
+    -moz-transform: translate3d(0, 10px, 0);
+    -ms-transform: translate3d(0, 10px, 0);
+    -o-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+  .nav-wrapper.active nav h1 span {
+    width: 300px;
+    background-size: 85%;
+    background-image: url(../img/logo-long.png); }
+  .nav-wrapper.active nav ul.nav-secondary {
+    pointer-events: auto;
+    opacity: 1; }
+  .nav-wrapper.active + #container::after {
+    pointer-events: auto;
+    opacity: 1; }
+
 #hamburger {
-  display: none; }
+  display: none;
+  width: 100%;
+  height: 64px;
+  background-image: url(../img/logo-long.png);
+  background-size: 240px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
   @media only screen and (min-width: 481px) and (max-width: 1023px) {
     #hamburger {
-      display: block;
-      width: 100%;
-      height: 64px;
-      background-image: url(../img/logo.png);
-      background-size: 80px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%; }
+      display: block; }
       #hamburger a {
         -webkit-transition: opacity 300ms;
         -moz-transition: opacity 300ms;
@@ -457,7 +525,7 @@ section.about {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px;
         text-align: center;
         line-height: 66px; }
@@ -478,15 +546,12 @@ section.about {
           border-bottom: 3px solid #999999; }
         #hamburger a:hover {
           opacity: 1; } }
+  #hamburger.home {
+    display: block;
+    height: 100px; }
 
-.nav-wrapper.active {
-  width: 300px; }
-  .nav-wrapper.active nav ul.nav-secondary {
-    pointer-events: auto;
-    opacity: 1; }
-  .nav-wrapper.active + #container::after {
-    pointer-events: auto;
-    opacity: 1; }
+#hamburger.home.top + .nav-wrapper nav h1 span {
+  opacity: 0; }
 
 section.events, section.articles {
   width: 100%;
@@ -517,19 +582,19 @@ section.events, section.articles {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 24px;
     float: left; }
   section.events h3, section.articles h3 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato"; }
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif; }
   section.events h4, section.articles h4 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px; }
   section.events .section-controls, section.articles .section-controls {
     float: right;
@@ -581,7 +646,7 @@ section.events, section.articles {
       letter-spacing: .1em;
       font-weight: 700;
       font-size: 12px;
-      font-family: "Montserrat";
+      font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
       color: rgba(153, 153, 153, 0.5); }
       section.events .section-controls .all:hover, section.articles .section-controls .all:hover {
         color: #999999; }
@@ -629,7 +694,7 @@ section.events, section.articles {
         color: #333333;
         font-weight: 500;
         font-size: 22px;
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         margin-bottom: 6px; }
       section.events .section-list article p.text-subtitle, section.events .section-page article p.text-subtitle, section.events section.articles .section-page article p.text-subtitle, section.articles section.events .section-page article p.text-subtitle, section.articles .section-list article p.text-subtitle, section.articles section.events .section-page article p.text-subtitle, section.events section.articles .section-page article p.text-subtitle, section.articles .section-page article p.text-subtitle {
         margin-bottom: 6px; }
@@ -653,7 +718,7 @@ section.events, section.articles {
         color: #333333;
         font-weight: 300;
         font-size: 32px;
-        font-family: "Lato";
+        font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 24px;
         color: #ffffff; }
       section.events .section-list article.col-2 p.text-subtitle, section.events .section-page article.col-2 p.text-subtitle, section.events section.articles .section-page article.col-2 p.text-subtitle, section.articles section.events .section-page article.col-2 p.text-subtitle, section.articles .section-list article.col-2 p.text-subtitle, section.articles section.events .section-page article.col-2 p.text-subtitle, section.events section.articles .section-page article.col-2 p.text-subtitle, section.articles .section-page article.col-2 p.text-subtitle {
@@ -667,7 +732,7 @@ section.events, section.articles {
       letter-spacing: .1em;
       font-weight: 700;
       font-size: 12px;
-      font-family: "Montserrat";
+      font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 16px;
       text-align: center;
       color: #009c83; }
@@ -691,7 +756,7 @@ section.events, section.articles {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px; }
     section.events .section-page article.headline, section.articles .section-page article.headline {
       padding-bottom: 24px; }
@@ -703,7 +768,7 @@ section.events, section.articles {
         color: #333333;
         font-weight: 300;
         font-size: 32px;
-        font-family: "Lato";
+        font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
         font-weight: 500; }
       section.events .section-page article.headline p.text-subtitle, section.articles .section-page article.headline p.text-subtitle {
@@ -723,7 +788,7 @@ section.events, section.articles {
     color: #333333;
     font-weight: 300;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
@@ -785,7 +850,7 @@ section.events, section.articles {
           color: #333333;
           font-weight: 300;
           font-size: 32px;
-          font-family: "Lato";
+          font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
           margin-bottom: 6px;
           color: #ffffff; }
         .boxes .box .box-content .box-content-inner p.text-subtitle {
@@ -794,7 +859,7 @@ section.events, section.articles {
           letter-spacing: .1em;
           font-weight: 700;
           font-size: 12px;
-          font-family: "Montserrat";
+          font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
           color: rgba(255, 255, 255, 0.75); }
       .boxes .box .box-content:hover::before {
         opacity: 1; }
@@ -832,7 +897,7 @@ section.events, section.articles {
         color: #333333;
         font-weight: 300;
         font-size: 32px;
-        font-family: "Lato";
+        font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         margin-bottom: 6px; }
       .boxes .box .box-hidden p.text-subtitle {
         color: #999999;
@@ -840,7 +905,7 @@ section.events, section.articles {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat"; }
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif; }
     .boxes .box.active .box-hidden {
       opacity: 1;
       pointer-events: auto; }
@@ -849,11 +914,46 @@ section.events, section.articles {
   .boxes.three-up .box {
     width: 33.3333%; }
 
+.image-parallax > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative; }
+  .image-parallax > div p {
+    color: #333333;
+    font-weight: 300;
+    font-size: 32px;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    padding: 24px;
+    min-height: 100px;
+    background: rgba(0, 0, 0, 0);
+    /* Old browsers */
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.75)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    /* IE10+ */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+
 #container > h1 {
   color: #333333;
   font-weight: 300;
   font-size: 32px;
-  font-family: "Lato";
+  font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   background: #404040;
   color: #ffffff;
   height: 100px;
@@ -879,7 +979,7 @@ section.events, section.articles {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px;
         display: inline-block;
         padding: 5px 8px;
@@ -911,7 +1011,7 @@ section.events, section.articles {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         display: block;
         line-height: 44px;
         padding: 0 24px; }
@@ -938,7 +1038,7 @@ section.events, section.articles {
         #container > h1.breadcrumb ul li:last-child a::after {
           display: none; }
 
-.hero {
+.hero, .image-parallax {
   position: relative;
   height: 320px;
   background: #00c4b5;
@@ -960,7 +1060,7 @@ section.events, section.articles {
   text-align: center;
   overflow: hidden;
   border-bottom: 5px solid #009c83; }
-  .hero.lime {
+  .hero.lime, .lime.image-parallax {
     background: #96e57c;
     /* Old browsers */
     background: -moz-linear-gradient(-45deg, #96e57c 0%, #80d680 100%);
@@ -978,7 +1078,7 @@ section.events, section.articles {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
     border-bottom: 5px solid #8bf795; }
-  .hero.teal {
+  .hero.teal, .teal.image-parallax {
     background: #73e1de;
     /* Old browsers */
     background: -moz-linear-gradient(-45deg, #73e1de 0%, #60dad7 100%);
@@ -996,15 +1096,15 @@ section.events, section.articles {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
     border-bottom: 5px solid #37d0cd; }
-  .hero.tall {
+  .hero.tall, .tall.image-parallax {
     height: 420px; }
-    .hero.tall ul, .hero.tall ul li {
+    .hero.tall ul, .tall.image-parallax ul, .hero.tall ul li, .tall.image-parallax ul li {
       height: 420px; }
-  .hero.extra-tall {
+  .hero.extra-tall, .extra-tall.image-parallax {
     height: 600px; }
-    .hero.extra-tall ul, .hero.extra-tall ul li {
+    .hero.extra-tall ul, .extra-tall.image-parallax ul, .hero.extra-tall ul li, .extra-tall.image-parallax ul li {
       height: 600px; }
-  .hero a.prev, .hero a.next {
+  .hero a.prev, .image-parallax a.prev, .hero a.next, .image-parallax a.next {
     font-size: 0;
     text-indent: -9999999em;
     position: absolute;
@@ -1012,13 +1112,13 @@ section.events, section.articles {
     height: 100%;
     width: 10%;
     top: 0; }
-    .hero a.prev ~ ul, .hero a.next ~ ul {
+    .hero a.prev ~ ul, .image-parallax a.prev ~ ul, .hero a.next ~ ul, .image-parallax a.next ~ ul {
       -webkit-transform: translate3d(-33.3333%, 0, 0);
       -moz-transform: translate3d(-33.3333%, 0, 0);
       -ms-transform: translate3d(-33.3333%, 0, 0);
       -o-transform: translate3d(-33.3333%, 0, 0);
       transform: translate3d(-33.3333%, 0, 0); }
-    .hero a.prev::after, .hero a.next::after {
+    .hero a.prev::after, .image-parallax a.prev::after, .hero a.next::after, .image-parallax a.next::after {
       content: "";
       display: block;
       position: absolute;
@@ -1030,35 +1130,35 @@ section.events, section.articles {
       border-top: 1px solid #ffffff;
       margin-top: -9px;
       margin-left: -9px; }
-  .hero a.prev {
+  .hero a.prev, .image-parallax a.prev {
     left: 0; }
-    .hero a.prev:hover ~ ul {
+    .hero a.prev:hover ~ ul, .image-parallax a.prev:hover ~ ul {
       -webkit-transform: translate3d(-30.3333%, 0, 0);
       -moz-transform: translate3d(-30.3333%, 0, 0);
       -ms-transform: translate3d(-30.3333%, 0, 0);
       -o-transform: translate3d(-30.3333%, 0, 0);
       transform: translate3d(-30.3333%, 0, 0); }
-    .hero a.prev::after {
+    .hero a.prev::after, .image-parallax a.prev::after {
       -webkit-transform: rotate(-135deg);
       -moz-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
       -o-transform: rotate(-135deg);
       transform: rotate(-135deg); }
-  .hero a.next {
+  .hero a.next, .image-parallax a.next {
     right: 0; }
-    .hero a.next:hover ~ ul {
+    .hero a.next:hover ~ ul, .image-parallax a.next:hover ~ ul {
       -webkit-transform: translate3d(-36.3333%, 0, 0);
       -moz-transform: translate3d(-36.3333%, 0, 0);
       -ms-transform: translate3d(-36.3333%, 0, 0);
       -o-transform: translate3d(-36.3333%, 0, 0);
       transform: translate3d(-36.3333%, 0, 0); }
-    .hero a.next::after {
+    .hero a.next::after, .image-parallax a.next::after {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg); }
-  .hero ul {
+  .hero ul, .image-parallax ul {
     z-index: 0;
     display: block;
     overflow: hidden;
@@ -1069,7 +1169,7 @@ section.events, section.articles {
     -ms-transition: all 300ms;
     -o-transition: all 300ms;
     transition: all 300ms; }
-    .hero ul li {
+    .hero ul li, .image-parallax ul li {
       display: block;
       height: 320px;
       overflow: hidden;
@@ -1077,35 +1177,35 @@ section.events, section.articles {
       float: left;
       background-size: cover;
       background-position: 50% 50%; }
-      .hero ul li .hero-outer {
+      .hero ul li .hero-outer, .image-parallax ul li .hero-outer {
         display: table;
         width: 80%;
         height: 100%;
         margin: 0 auto; }
-        .hero ul li .hero-outer > .hero-inner {
+        .hero ul li .hero-outer > .hero-inner, .image-parallax ul li .hero-outer > .hero-inner {
           width: 100%;
           height: 100%;
           display: table-cell;
           text-align: center;
           vertical-align: middle; }
-  .hero h3 {
+  .hero h3, .image-parallax h3 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 64px;
     color: #ffffff; }
     @media only screen and (max-width: 480px) {
-      .hero h3 {
+      .hero h3, .image-parallax h3 {
         color: #333333;
         font-weight: 300;
         font-size: 32px;
-        font-family: "Lato"; } }
-  .hero h4 {
+        font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif; } }
+  .hero h4, .image-parallax h4 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #ffffff; }
 
 .newsletter, .social a {
@@ -1121,12 +1221,18 @@ section.events, section.articles {
     display: inline-block;
     overflow: hidden;
     padding: 24px 0 24px 24px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    height: 120px;
+    -webkit-transition: width 300ms, padding 300ms, opacity 300ms;
+    -moz-transition: width 300ms, padding 300ms, opacity 300ms;
+    -ms-transition: width 300ms, padding 300ms, opacity 300ms;
+    -o-transition: width 300ms, padding 300ms, opacity 300ms;
+    transition: width 300ms, padding 300ms, opacity 300ms; }
   .newsletter > h4, .social a > h4 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px;
     color: #ffffff;
     width: 25%; }
@@ -1136,7 +1242,7 @@ section.events, section.articles {
       letter-spacing: .1em;
       font-weight: 700;
       font-size: 12px;
-      font-family: "Montserrat";
+      font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 9px;
       display: block;
       color: #666666; }
@@ -1145,7 +1251,7 @@ section.events, section.articles {
     color: #333333;
     font-weight: 300;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
@@ -1157,15 +1263,17 @@ section.events, section.articles {
     color: #999999;
     letter-spacing: .06em; }
   .newsletter > form, .social a > form {
-    width: 35%;
-    text-align: right; }
+    width: 35%; }
     .newsletter > form input, .social a > form input {
       vertical-align: middle; }
+      .newsletter > form input:focus, .social a > form input:focus {
+        outline: none;
+        border: 3px solid #00c4b5; }
     .newsletter > form input[type="text"], .social a > form input[type="text"] {
       color: #333333;
       font-weight: 300;
       font-size: 18px;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
       -ms-font-smoothing: antialiased;
@@ -1181,6 +1289,11 @@ section.events, section.articles {
     .newsletter > form input[type="submit"], .social a > form input[type="submit"] {
       font-size: 0;
       text-indent: -9999999em;
+      -webkit-transition: opacity 300ms;
+      -moz-transition: opacity 300ms;
+      -ms-transition: opacity 300ms;
+      -o-transition: opacity 300ms;
+      transition: opacity 300ms;
       padding: 0;
       display: inline-block;
       width: 42px;
@@ -1191,42 +1304,98 @@ section.events, section.articles {
     position: absolute;
     top: 0;
     right: 0; }
+  .newsletter.active > h4, .social a.active > h4, .newsletter.active > .description, .social a.active > .description {
+    opacity: 0;
+    width: 0;
+    padding-right: 0;
+    padding-left: 0; }
+  .newsletter.active > form, .social a.active > form {
+    width: 100%; }
+    .newsletter.active > form input[type="text"], .social a.active > form input[type="text"] {
+      width: 30%; }
+    .newsletter.active > form input[type="submit"], .social a.active > form input[type="submit"] {
+      pointer-events: none;
+      opacity: 0; }
 
 .article-intro, .boxes .box .box-hidden, .article-body, .event-body {
-  padding: 24px 96px;
+  padding: 72px 96px;
   line-height: 1.8em;
   font-weight: 300;
   letter-spacing: .025em;
   color: #000000;
   background-color: #f0f0f0;
   overflow: hidden; }
-  .article-intro p, .boxes .box .box-hidden p, .article-body p, .event-body p {
-    margin-bottom: 24px; }
-    .article-intro p:last-child, .boxes .box .box-hidden p:last-child, .article-body p:last-child, .event-body p:last-child {
-      margin-bottom: 6px; }
-
-.article-body, .event-body {
-  background: #ffffff;
-  padding: 96px 48px;
-  font-weight: 400; }
-  .article-body h3, .event-body h3, .article-body p, .event-body p, .article-body ul, .event-body ul {
+  .article-intro h3, .boxes .box .box-hidden h3, .article-body h3, .event-body h3, .article-intro p, .boxes .box .box-hidden p, .article-body p, .event-body p, .article-intro ul, .boxes .box .box-hidden ul, .article-body ul, .event-body ul {
     margin: 0 auto 24px;
     max-width: 720px; }
-  .article-body img.full, .event-body img.full {
+  .article-intro *:last-child, .boxes .box .box-hidden *:last-child, .article-body *:last-child, .event-body *:last-child {
+    margin-bottom: 6px; }
+  .article-intro div.sidenote, .boxes .box .box-hidden div.sidenote, .article-body div.sidenote, .event-body div.sidenote {
+    margin-left: 0;
+    font-size: 14px; }
+    .article-intro div.sidenote > p, .boxes .box .box-hidden div.sidenote > p, .article-body div.sidenote > p, .event-body div.sidenote > p {
+      display: block;
+      border-left: 3px solid #009c83;
+      margin-bottom: 24px;
+      padding: 0 24px 0 12px;
+      line-height: 20px; }
+      .article-intro div.sidenote > p span, .boxes .box .box-hidden div.sidenote > p span, .article-body div.sidenote > p span, .event-body div.sidenote > p span {
+        display: block; }
+      .article-intro div.sidenote > p.text-pullquote, .boxes .box .box-hidden div.sidenote > p.text-pullquote, .article-body div.sidenote > p.text-pullquote, .event-body div.sidenote > p.text-pullquote {
+        font-size: 32px;
+        line-height: 40px; }
+        .article-intro div.sidenote > p.text-pullquote::before, .boxes .box .box-hidden div.sidenote > p.text-pullquote::before, .article-body div.sidenote > p.text-pullquote::before, .event-body div.sidenote > p.text-pullquote::before {
+          content: "\201C"; }
+        .article-intro div.sidenote > p.text-pullquote::after, .boxes .box .box-hidden div.sidenote > p.text-pullquote::after, .article-body div.sidenote > p.text-pullquote::after, .event-body div.sidenote > p.text-pullquote::after {
+          content: "\201D"; }
+    .article-intro div.sidenote.full, .boxes .box .box-hidden div.sidenote.full, .article-body div.sidenote.full, .event-body div.sidenote.full {
+      width: 100%;
+      margin: 48px 0 48px 0; }
+      .article-intro div.sidenote.full > p, .boxes .box .box-hidden div.sidenote.full > p, .article-body div.sidenote.full > p, .event-body div.sidenote.full > p {
+        margin: 0;
+        padding: 0;
+        border-left: none;
+        color: #aaaaaa;
+        max-width: 100%; }
+    .article-intro div.sidenote.left, .boxes .box .box-hidden div.sidenote.left, .article-body div.sidenote.left, .event-body div.sidenote.left {
+      float: left;
+      margin: 0 24px 24px 0;
+      max-width: 300px; }
+    .article-intro div.sidenote.right, .boxes .box .box-hidden div.sidenote.right, .article-body div.sidenote.right, .event-body div.sidenote.right {
+      float: right;
+      margin: 0 0 24px 24px;
+      max-width: 300px; }
+  .article-intro img, .boxes .box .box-hidden img, .article-body img, .event-body img {
+    max-width: 100%; }
+  .article-intro img.full, .boxes .box .box-hidden img.full, .article-body img.full, .event-body img.full {
     width: 100%;
     margin: 0 0 24px 0; }
-  .article-body h3, .event-body h3 {
+  .article-intro img.right, .boxes .box .box-hidden img.right, .article-body img.right, .event-body img.right, .article-intro img.left, .boxes .box .box-hidden img.left, .article-body img.left, .event-body img.left {
+    max-width: 300px; }
+  .article-intro img.right, .boxes .box .box-hidden img.right, .article-body img.right, .event-body img.right {
+    margin: 0 0 24px 24px; }
+  .article-intro img.left, .boxes .box .box-hidden img.left, .article-body img.left, .event-body img.left {
+    margin: 0 24px 24px 0; }
+  .article-intro h3, .boxes .box .box-hidden h3, .article-body h3, .event-body h3 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
-    font-family: "Lato";
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px;
     text-align: center; }
   @media only screen and (min-width: 481px) and (max-width: 1023px) {
-    .article-body, .event-body {
+    .article-intro, .boxes .box .box-hidden, .article-body, .event-body {
       padding: 24px 0; }
-      .article-body img.full, .event-body img.full {
+      .article-intro img.full, .boxes .box .box-hidden img.full, .article-body img.full, .event-body img.full {
         margin: 0; } }
+
+.article-body, .event-body {
+  background: #ffffff;
+  padding: 48px;
+  font-weight: 400; }
+  .article-body .question, .event-body .question {
+    font-weight: 700;
+    margin-bottom: 0; }
 
 .events article.event {
   height: 200px;
@@ -1263,7 +1432,7 @@ section.events, section.articles {
   letter-spacing: .1em;
   font-weight: 700;
   font-size: 12px;
-  font-family: "Montserrat";
+  font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   margin-top: 12px; }
 .events .date {
@@ -1287,7 +1456,7 @@ section.events, section.articles {
     color: #333333;
     font-weight: 500;
     font-size: 22px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 6px; }
   .events .article-text p.text-subtitle {
     color: #999999;
@@ -1295,7 +1464,7 @@ section.events, section.articles {
     letter-spacing: .1em;
     font-weight: 700;
     font-size: 12px;
-    font-family: "Montserrat";
+    font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 6px; }
 
 .event-details {
@@ -1375,7 +1544,7 @@ section.events, section.articles {
   letter-spacing: .1em;
   font-weight: 700;
   font-size: 12px;
-  font-family: "Montserrat";
+  font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   display: block;
   margin-top: 6px; }
 
@@ -1387,10 +1556,11 @@ section.events, section.articles {
   margin: 0 auto;
   padding: 48px 0 24px 0; }
   .eventbrite h3 {
-    font-size: 28px;
+    color: #333333;
     font-weight: 300;
-    margin-bottom: 48px;
-    text-align: center; }
+    font-size: 32px;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px; }
 
 footer {
   background: black;
@@ -1420,7 +1590,7 @@ footer {
     color: #333333;
     font-weight: 300;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
@@ -1450,7 +1620,7 @@ footer {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px;
         display: block;
         padding: 6px 0;
@@ -1469,7 +1639,7 @@ footer {
         letter-spacing: .1em;
         font-weight: 700;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px;
         color: rgba(255, 255, 255, 0.5); }
         footer ul.social-links li a:hover {

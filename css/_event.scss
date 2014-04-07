@@ -130,10 +130,7 @@
 
 .eventbrite {
   h3 {
-    font-size:28px;
-    font-weight:300;
-    margin-bottom:48px;
-    text-align:center;
+    @include font-head-small;
   }
   max-width:720px;
   margin:0 auto;
