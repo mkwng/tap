@@ -2,7 +2,7 @@
 @import "fonts";
 
 $break-small: 480px;
-$break-large: 1024px;
+$break-large: 799px;
 
 @mixin respond-to($media) {
   @if $media == phone {
@@ -72,6 +72,8 @@ strong {
   padding:18px $margin;
   background:$green-dark;
   color:#ffffff;
+  @include respond-to(tablet) {padding:16px $margin/1.5;}
+  @include respond-to(phone) {padding:14px $margin/2;}
   &:hover {
     background:$green-light;
   }
