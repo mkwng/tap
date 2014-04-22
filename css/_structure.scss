@@ -24,6 +24,7 @@ section.events,section.articles {
     width:100%;
     background-color:#f0f0f0;
     padding:$margin $margin $margin*2;
+    @include respond-to(phone) {padding:$margin/2 $margin/2 $margin;}
     .article-text {
       padding:0;
     }
@@ -135,10 +136,15 @@ section.events,section.articles {
       }
     }
     article.col-2 {
+      @include prefix(transition,background $duration);
       background:$grey;
       width:$colWidth*2 + $margin;
       color:$textDark-light;
-      @include prefix(transition,background $duration);
+
+      @include respond-to(phone) {
+        max-width:$break-small - ($margin*2);
+      }
+
       &:hover {
         background:darken($grey,3%);
       }

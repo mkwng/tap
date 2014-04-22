@@ -2,6 +2,11 @@ footer {
   background:$darkGrey;
   padding:$margin*2 $margin $margin*2.5 $navWidth+$margin;
   font-size:0;
+
+  @include respond-to(tablet) {
+    padding-left:$margin;
+  }
+
   >h1,>p.description,>ul.nav,>ul.social-links{
     display:inline-block;
     vertical-align:middle;

@@ -18,14 +18,17 @@ $textDark-light: #999999;
   font-weight:300;
   font-size:32px;
   font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+  @include respond-to(phone) {font-size:24px;}
 }
 @mixin font-head-large {
   @include font-head;
   font-size:64px;
+  @include respond-to(phone) {font-size:48px;}
 }
 @mixin font-head-small {
   @include font-head;
   font-size:24px;
+  @include respond-to(phone) {font-size:18px;} 
 }
 
 @mixin font-title {
@@ -33,6 +36,7 @@ $textDark-light: #999999;
   font-weight:500;
   font-size:22px;
   font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+  @include respond-to(phone) {font-size:16px;}
 }
 
 @mixin font-label {
@@ -42,14 +46,17 @@ $textDark-light: #999999;
   font-weight:700;
   font-size:12px;
   font-family:"Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  // @include respond-to(phone) {font-size:10px;}
 }
 @mixin font-label-large {
   @include font-label;
   font-size:16px;
+  @include respond-to(phone) {font-size:12px;}
 }
 @mixin font-label-small {
   @include font-label;
   font-size:9px;
+  @include respond-to(phone) {font-size:8px;}
 }
 
 @mixin font-text {
@@ -58,15 +65,18 @@ $textDark-light: #999999;
   font-size:18px;
   font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   @include pretty-text;
+  @include respond-to(phone) {font-size:14px;}
 }
 @mixin font-text-large {
   @include font-text;
   font-size:22px;
+  @include respond-to(phone) {font-size:18px;}
 }
 @mixin font-text-small {
   @include font-text;
   font-size:13px;
   font-weight:400;
+  @include respond-to(phone) {font-size:11px;}
 }
 
 @mixin font-alt {
@@ -81,6 +91,7 @@ $textDark-light: #999999;
   line-height:40px;
   font-family: Georgia, Times, "Times New Roman", serif;  
   @include pretty-text;
+  // @include respond-to(phone) {font-size:24px;}
 }
 
 

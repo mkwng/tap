@@ -94,6 +94,12 @@
   text-align:center;
   overflow:hidden;
   border-bottom:5px solid $green;
+  @include respond-to(phone) {
+    height:240px;
+    ul,ul li {
+      height:240px;
+    }
+  }
 
   &.lime {
     @include gradient($lime-light,$lime-dark);
@@ -108,11 +114,23 @@
     ul,ul li {
       height:420px;
     }
+    @include respond-to(phone) {
+      height:360px;
+      ul,ul li {
+        height:360px;
+      }
+    }
   }
   &.extra-tall {
     height:600px;
     ul,ul li {
       height:600px;
+    }
+    @include respond-to(phone) {
+      height:420px;
+      ul,ul li {
+        height:420px;
+      }
     }
   }
 
@@ -192,12 +210,11 @@
   h3 {
     @include font-head-large;
     color:#ffffff;
-      @include respond-to(phone) {
-        @include font-head;
-      }
   }
   h4 {
     @include font-head;
     color:#ffffff;
   }
+
+
 }

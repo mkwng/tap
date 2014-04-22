@@ -159,6 +159,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
   min-height: 100%; }
+  @media only screen and (max-width: 480px) {
+    body {
+      font-size: 14px; } }
 
 a {
   text-decoration: none;
@@ -210,7 +213,7 @@ strong {
 #container {
   overflow: hidden;
   padding-left: 100px; }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #container {
       padding-left: 0px; } }
   #container::after {
@@ -274,6 +277,9 @@ strong {
     line-height: 40px;
     text-align: center;
     background: rgba(0, 0, 0, 0.05); }
+    @media only screen and (max-width: 480px) {
+      .sidebar-tabs a {
+        font-size: 8px; } }
     .sidebar-tabs a:hover {
       background: rgba(0, 0, 0, 0.08); }
     .sidebar-tabs a.active {
@@ -291,6 +297,9 @@ section.about {
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 48px;
     color: white; }
+    @media only screen and (max-width: 480px) {
+      section.about h2 {
+        font-size: 24px; } }
   section.about p {
     color: rgba(255, 255, 255, 0.8);
     margin: 0 auto 48px auto;
@@ -380,6 +389,9 @@ section.about {
           width: 100px;
           text-align: center;
           top: 66px; }
+          @media only screen and (max-width: 480px) {
+            .nav-wrapper nav ul.nav-primary li > span {
+              font-size: 8px; } }
         .nav-wrapper nav ul.nav-primary li.active {
           background: rgba(0, 0, 0, 0.5); }
         .nav-wrapper nav ul.nav-primary li a {
@@ -397,6 +409,9 @@ section.about {
           position: relative;
           line-height: 100px;
           text-indent: 100px; }
+          @media only screen and (max-width: 480px) {
+            .nav-wrapper nav ul.nav-primary li a {
+              font-size: 12px; } }
           .nav-wrapper nav ul.nav-primary li a::before {
             -webkit-transition: transform 300ms ease-out;
             -moz-transition: transform 300ms ease-out;
@@ -465,7 +480,7 @@ section.about {
           .nav-wrapper nav ul.nav-secondary li a:hover {
             background: #009c83;
             opacity: 1; }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .nav-wrapper {
       width: 0; } }
 
@@ -498,7 +513,7 @@ section.about {
   background-size: 240px;
   background-repeat: no-repeat;
   background-position: 50% 50%; }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #hamburger {
       display: block; }
       #hamburger a {
@@ -520,13 +535,6 @@ section.about {
         -o-border-radius: 4px;
         border-radius: 4px;
         z-index: 99;
-        color: #999999;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        font-weight: 700;
-        font-size: 12px;
-        font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 9px;
         text-align: center;
         line-height: 66px; }
         #hamburger a::after, #hamburger a::before {
@@ -576,6 +584,9 @@ section.events, section.articles {
     width: 100%;
     background-color: #f0f0f0;
     padding: 24px 24px 48px; }
+    @media only screen and (max-width: 480px) {
+      section.events .full-width, section.articles .full-width {
+        padding: 12px 12px 24px; } }
     section.events .full-width .article-text, section.articles .full-width .article-text {
       padding: 0; }
   section.events h2, section.articles h2 {
@@ -585,17 +596,29 @@ section.events, section.articles {
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 24px;
     float: left; }
+    @media only screen and (max-width: 480px) {
+      section.events h2, section.articles h2 {
+        font-size: 24px; } }
   section.events h3, section.articles h3 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif; }
+    @media only screen and (max-width: 480px) {
+      section.events h3, section.articles h3 {
+        font-size: 24px; } }
   section.events h4, section.articles h4 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px; }
+    @media only screen and (max-width: 480px) {
+      section.events h4, section.articles h4 {
+        font-size: 24px; } }
+    @media only screen and (max-width: 480px) {
+      section.events h4, section.articles h4 {
+        font-size: 18px; } }
   section.events .section-controls, section.articles .section-controls {
     float: right;
     font-size: 0;
@@ -696,17 +719,23 @@ section.events, section.articles {
         font-size: 22px;
         font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         margin-bottom: 6px; }
+        @media only screen and (max-width: 480px) {
+          section.events .section-list article h4, section.events .section-page article h4, section.events section.articles .section-page article h4, section.articles section.events .section-page article h4, section.articles .section-list article h4, section.articles section.events .section-page article h4, section.events section.articles .section-page article h4, section.articles .section-page article h4 {
+            font-size: 16px; } }
       section.events .section-list article p.text-subtitle, section.events .section-page article p.text-subtitle, section.events section.articles .section-page article p.text-subtitle, section.articles section.events .section-page article p.text-subtitle, section.articles .section-list article p.text-subtitle, section.articles section.events .section-page article p.text-subtitle, section.events section.articles .section-page article p.text-subtitle, section.articles .section-page article p.text-subtitle {
         margin-bottom: 6px; }
     section.events .section-list article.col-2, section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles section.events .section-page article.col-2, section.articles .section-list article.col-2, section.articles section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles .section-page article.col-2 {
-      background: #404040;
-      width: 624px;
-      color: #999999;
       -webkit-transition: background 300ms;
       -moz-transition: background 300ms;
       -ms-transition: background 300ms;
       -o-transition: background 300ms;
-      transition: background 300ms; }
+      transition: background 300ms;
+      background: #404040;
+      width: 624px;
+      color: #999999; }
+      @media only screen and (max-width: 480px) {
+        section.events .section-list article.col-2, section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles section.events .section-page article.col-2, section.articles .section-list article.col-2, section.articles section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles .section-page article.col-2 {
+          max-width: 432px; } }
       section.events .section-list article.col-2:hover, section.events .section-page article.col-2:hover, section.events section.articles .section-page article.col-2:hover, section.articles section.events .section-page article.col-2:hover, section.articles .section-list article.col-2:hover, section.articles section.events .section-page article.col-2:hover, section.events section.articles .section-page article.col-2:hover, section.articles .section-page article.col-2:hover {
         background: #383838; }
       section.events .section-list article.col-2 .article-img, section.events .section-page article.col-2 .article-img, section.events section.articles .section-page article.col-2 .article-img, section.articles section.events .section-page article.col-2 .article-img, section.articles .section-list article.col-2 .article-img, section.articles section.events .section-page article.col-2 .article-img, section.events section.articles .section-page article.col-2 .article-img, section.articles .section-page article.col-2 .article-img {
@@ -721,6 +750,12 @@ section.events, section.articles {
         font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 24px;
         color: #ffffff; }
+        @media only screen and (max-width: 480px) {
+          section.events .section-list article.col-2 h4, section.events .section-page article.col-2 h4, section.events section.articles .section-page article.col-2 h4, section.articles section.events .section-page article.col-2 h4, section.articles .section-list article.col-2 h4, section.articles section.events .section-page article.col-2 h4, section.events section.articles .section-page article.col-2 h4, section.articles .section-page article.col-2 h4 {
+            font-size: 24px; } }
+        @media only screen and (max-width: 480px) {
+          section.events .section-list article.col-2 h4, section.events .section-page article.col-2 h4, section.events section.articles .section-page article.col-2 h4, section.articles section.events .section-page article.col-2 h4, section.articles .section-list article.col-2 h4, section.articles section.events .section-page article.col-2 h4, section.events section.articles .section-page article.col-2 h4, section.articles .section-page article.col-2 h4 {
+            font-size: 18px; } }
       section.events .section-list article.col-2 p.text-subtitle, section.events .section-page article.col-2 p.text-subtitle, section.events section.articles .section-page article.col-2 p.text-subtitle, section.articles section.events .section-page article.col-2 p.text-subtitle, section.articles .section-list article.col-2 p.text-subtitle, section.articles section.events .section-page article.col-2 p.text-subtitle, section.events section.articles .section-page article.col-2 p.text-subtitle, section.articles .section-page article.col-2 p.text-subtitle {
         color: #666666; }
   section.events .section-page, section.articles .section-page {
@@ -736,6 +771,9 @@ section.events, section.articles {
       font-size: 16px;
       text-align: center;
       color: #009c83; }
+      @media only screen and (max-width: 480px) {
+        section.events .section-page h3, section.articles .section-page h3 {
+          font-size: 12px; } }
     section.events .section-page article, section.events .section-page article.col-2, section.articles .section-page article, section.articles .section-page article.col-2 {
       width: 100%;
       height: auto;
@@ -758,6 +796,9 @@ section.events, section.articles {
         font-size: 12px;
         font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px; }
+        @media only screen and (max-width: 480px) {
+          section.events .section-page article p.text-subtitle, section.events .section-page article.col-2 p.text-subtitle, section.articles .section-page article p.text-subtitle, section.articles .section-page article.col-2 p.text-subtitle {
+            font-size: 8px; } }
     section.events .section-page article.headline, section.articles .section-page article.headline {
       padding-bottom: 24px; }
       section.events .section-page article.headline .article-img, section.articles .section-page article.headline .article-img {
@@ -771,6 +812,9 @@ section.events, section.articles {
         font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
         font-weight: 500; }
+        @media only screen and (max-width: 480px) {
+          section.events .section-page article.headline h4, section.articles .section-page article.headline h4 {
+            font-size: 24px; } }
       section.events .section-page article.headline p.text-subtitle, section.articles .section-page article.headline p.text-subtitle {
         color: #666666; }
   section.events .more, section.articles .more {
@@ -798,6 +842,9 @@ section.events, section.articles {
     display: inline-block;
     height: 200.01px;
     vertical-align: top; }
+    @media only screen and (max-width: 480px) {
+      .boxes .box {
+        font-size: 14px; } }
     .boxes .box .box-content {
       position: relative;
       width: 100%;
@@ -853,6 +900,9 @@ section.events, section.articles {
           font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
           margin-bottom: 6px;
           color: #ffffff; }
+          @media only screen and (max-width: 480px) {
+            .boxes .box .box-content .box-content-inner h4 {
+              font-size: 24px; } }
         .boxes .box .box-content .box-content-inner p.text-subtitle {
           color: #999999;
           text-transform: uppercase;
@@ -882,7 +932,7 @@ section.events, section.articles {
       opacity: 0;
       cursor: pointer;
       pointer-events: none; }
-      @media only screen and (min-width: 481px) and (max-width: 1023px) {
+      @media only screen and (max-width: 1023px) {
         .boxes .box .box-hidden {
           padding: 96px 96px 0 96px !important; } }
       .boxes .box .box-hidden::after {
@@ -899,6 +949,9 @@ section.events, section.articles {
         font-size: 32px;
         font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
         margin-bottom: 6px; }
+        @media only screen and (max-width: 480px) {
+          .boxes .box .box-hidden h4 {
+            font-size: 24px; } }
       .boxes .box .box-hidden p.text-subtitle {
         color: #999999;
         text-transform: uppercase;
@@ -948,6 +1001,12 @@ section.events, section.articles {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */ }
+    @media only screen and (max-width: 480px) {
+      .image-parallax > div p {
+        font-size: 24px; } }
+    @media only screen and (max-width: 480px) {
+      .image-parallax > div p {
+        font-size: 18px; } }
 
 #container > h1 {
   color: #333333;
@@ -961,6 +1020,9 @@ section.events, section.articles {
   padding-left: 24px;
   border-bottom: 5px solid #009c83;
   position: relative; }
+  @media only screen and (max-width: 480px) {
+    #container > h1 {
+      font-size: 24px; } }
   #container > h1 .categories {
     display: block;
     position: absolute;
@@ -988,6 +1050,9 @@ section.events, section.articles {
         vertical-align: middle;
         line-height: 12px;
         color: #666666; }
+        @media only screen and (max-width: 480px) {
+          #container > h1 .categories li a {
+            font-size: 8px; } }
         #container > h1 .categories li a:hover {
           color: #aaaaaa; }
         #container > h1 .categories li a.active {
@@ -1060,6 +1125,11 @@ section.events, section.articles {
   text-align: center;
   overflow: hidden;
   border-bottom: 5px solid #009c83; }
+  @media only screen and (max-width: 480px) {
+    .hero, .image-parallax {
+      height: 240px; }
+      .hero ul, .image-parallax ul, .hero ul li, .image-parallax ul li {
+        height: 240px; } }
   .hero.lime, .lime.image-parallax {
     background: #96e57c;
     /* Old browsers */
@@ -1100,10 +1170,20 @@ section.events, section.articles {
     height: 420px; }
     .hero.tall ul, .tall.image-parallax ul, .hero.tall ul li, .tall.image-parallax ul li {
       height: 420px; }
+    @media only screen and (max-width: 480px) {
+      .hero.tall, .tall.image-parallax {
+        height: 360px; }
+        .hero.tall ul, .tall.image-parallax ul, .hero.tall ul li, .tall.image-parallax ul li {
+          height: 360px; } }
   .hero.extra-tall, .extra-tall.image-parallax {
     height: 600px; }
     .hero.extra-tall ul, .extra-tall.image-parallax ul, .hero.extra-tall ul li, .extra-tall.image-parallax ul li {
       height: 600px; }
+    @media only screen and (max-width: 480px) {
+      .hero.extra-tall, .extra-tall.image-parallax {
+        height: 420px; }
+        .hero.extra-tall ul, .extra-tall.image-parallax ul, .hero.extra-tall ul li, .extra-tall.image-parallax ul li {
+          height: 420px; } }
   .hero a.prev, .image-parallax a.prev, .hero a.next, .image-parallax a.next {
     font-size: 0;
     text-indent: -9999999em;
@@ -1197,16 +1277,19 @@ section.events, section.articles {
     color: #ffffff; }
     @media only screen and (max-width: 480px) {
       .hero h3, .image-parallax h3 {
-        color: #333333;
-        font-weight: 300;
-        font-size: 32px;
-        font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif; } }
+        font-size: 24px; } }
+    @media only screen and (max-width: 480px) {
+      .hero h3, .image-parallax h3 {
+        font-size: 48px; } }
   .hero h4, .image-parallax h4 {
     color: #333333;
     font-weight: 300;
     font-size: 32px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #ffffff; }
+    @media only screen and (max-width: 480px) {
+      .hero h4, .image-parallax h4 {
+        font-size: 24px; } }
 
 .newsletter, .social a {
   position: relative;
@@ -1236,6 +1319,12 @@ section.events, section.articles {
     font-size: 24px;
     color: #ffffff;
     width: 25%; }
+    @media only screen and (max-width: 480px) {
+      .newsletter > h4, .social a > h4 {
+        font-size: 24px; } }
+    @media only screen and (max-width: 480px) {
+      .newsletter > h4, .social a > h4 {
+        font-size: 18px; } }
     .newsletter > h4 .label, .social a > h4 .label {
       color: #999999;
       text-transform: uppercase;
@@ -1246,6 +1335,9 @@ section.events, section.articles {
       font-size: 9px;
       display: block;
       color: #666666; }
+      @media only screen and (max-width: 480px) {
+        .newsletter > h4 .label, .social a > h4 .label {
+          font-size: 8px; } }
   .newsletter > .description, .social a > .description {
     width: 40%;
     color: #333333;
@@ -1262,6 +1354,12 @@ section.events, section.articles {
     font-weight: 400;
     color: #999999;
     letter-spacing: .06em; }
+    @media only screen and (max-width: 480px) {
+      .newsletter > .description, .social a > .description {
+        font-size: 14px; } }
+    @media only screen and (max-width: 480px) {
+      .newsletter > .description, .social a > .description {
+        font-size: 11px; } }
   .newsletter > form, .social a > form {
     width: 35%; }
     .newsletter > form input, .social a > form input {
@@ -1286,6 +1384,9 @@ section.events, section.articles {
       line-height: 42px;
       height: 42px;
       padding: 0 12px; }
+      @media only screen and (max-width: 480px) {
+        .newsletter > form input[type="text"], .social a > form input[type="text"] {
+          font-size: 14px; } }
     .newsletter > form input[type="submit"], .social a > form input[type="submit"] {
       font-size: 0;
       text-indent: -9999999em;
@@ -1383,7 +1484,13 @@ section.events, section.articles {
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px;
     text-align: center; }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    @media only screen and (max-width: 480px) {
+      .article-intro h3, .boxes .box .box-hidden h3, .article-body h3, .event-body h3 {
+        font-size: 24px; } }
+    @media only screen and (max-width: 480px) {
+      .article-intro h3, .boxes .box .box-hidden h3, .article-body h3, .event-body h3 {
+        font-size: 18px; } }
+  @media only screen and (max-width: 1023px) {
     .article-intro, .boxes .box .box-hidden, .article-body, .event-body {
       padding: 24px 0; }
       .article-intro img.full, .boxes .box .box-hidden img.full, .article-body img.full, .event-body img.full {
@@ -1435,6 +1542,9 @@ section.events, section.articles {
   font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   margin-top: 12px; }
+  @media only screen and (max-width: 480px) {
+    .events .month {
+      font-size: 12px; } }
 .events .date {
   font-size: 48px; }
 .events .article-text {
@@ -1458,6 +1568,9 @@ section.events, section.articles {
     font-size: 22px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-bottom: 6px; }
+    @media only screen and (max-width: 480px) {
+      .events .article-text h4 {
+        font-size: 16px; } }
   .events .article-text p.text-subtitle {
     color: #999999;
     text-transform: uppercase;
@@ -1561,11 +1674,20 @@ section.events, section.articles {
     font-size: 32px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px; }
+    @media only screen and (max-width: 480px) {
+      .eventbrite h3 {
+        font-size: 24px; } }
+    @media only screen and (max-width: 480px) {
+      .eventbrite h3 {
+        font-size: 18px; } }
 
 footer {
   background: black;
   padding: 48px 24px 60px 124px;
   font-size: 0; }
+  @media only screen and (max-width: 1023px) {
+    footer {
+      padding-left: 24px; } }
   footer > h1, footer > p.description, footer > ul.nav, footer > ul.social-links {
     display: inline-block;
     vertical-align: middle;
@@ -1603,6 +1725,12 @@ footer {
     color: rgba(255, 255, 255, 0.5);
     width: 25%;
     padding-right: 48px; }
+    @media only screen and (max-width: 480px) {
+      footer p.description {
+        font-size: 14px; } }
+    @media only screen and (max-width: 480px) {
+      footer p.description {
+        font-size: 11px; } }
     footer p.description a {
       color: rgba(255, 255, 255, 0.6);
       text-decoration: underline; }
@@ -1625,6 +1753,9 @@ footer {
         display: block;
         padding: 6px 0;
         color: rgba(255, 255, 255, 0.5); }
+        @media only screen and (max-width: 480px) {
+          footer ul.nav li a {
+            font-size: 8px; } }
         footer ul.nav li a:hover {
           color: #ffffff; }
   footer ul.social-links {
@@ -1642,5 +1773,8 @@ footer {
         font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 9px;
         color: rgba(255, 255, 255, 0.5); }
+        @media only screen and (max-width: 480px) {
+          footer ul.social-links li a {
+            font-size: 8px; } }
         footer ul.social-links li a:hover {
           color: #ffffff; }

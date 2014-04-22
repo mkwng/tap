@@ -51,6 +51,11 @@ $(".nav-wrapper").hover(
   }
 );
 
+$("#hamburger").click(function() {
+  $(".nav-wrapper").toggleClass("active");
+  return false;
+});
+
 $(".section-controls a.next").click(function() {
   var $t = $(this);
   $t.parent().siblings(".section-list").css("transform","translate3d(-650px,0,0)");

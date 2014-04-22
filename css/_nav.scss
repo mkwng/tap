@@ -207,7 +207,6 @@
       background:#ffffff;
       @include prefix(border-radius,4px);
       z-index:99;
-      @include font-label-small;
       text-align:center;
       line-height:66px;
       &::after,&::before {
