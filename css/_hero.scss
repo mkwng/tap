@@ -183,6 +183,8 @@
     overflow:hidden;
     width:300%;
     height:320px;
+
+
     @include prefix(transition,all $duration);
     li {
       display:block;
@@ -216,5 +218,11 @@
     color:#ffffff;
   }
 
-
+  @include respond-to(phone) {height:240px; ul,ul li {height:240px;}}
+  &.tall { height:420px;ul,ul li {height:420px;}
+    @include respond-to(phone) {height:360px;ul,ul li {height:360px;}}
+  }
+  &.extra-tall { height:600px;ul,ul li {height:600px;}
+    @include respond-to(phone) {height:420px;ul,ul li {height:420px;}}
+  }
 }

@@ -6,36 +6,30 @@
   color:#ffffff;
   font-size:0;
   transition:background .2s;
-  &:hover {
-    background:lighten($darkGrey,10%);
-  }
+
   > h4, > .description,> form{
+    padding:$margin/2 ;
     display:inline-block;
     overflow:hidden;
-    padding:$margin 0 $margin $margin;
     vertical-align:middle;
-    height:120px;
-    @include prefix(transition,width $duration, padding $duration, opacity $duration);
   }
+
   > h4 {
     @include font-head-small;
     color:#ffffff;
-    width:25%;
     .label {
-      @include font-label-small;
       display:block;
       color:$textDark-dark;
+      @include font-label-small;
     }
   }
   > .description {
-    width:40%;
     @include font-text-small;
     color:$textDark-light;
     letter-spacing:.06em;
   }
+
   > form {
-    width:35%;
-    // text-align:right;
     input {
       vertical-align:middle;
       &:focus{
@@ -45,12 +39,11 @@
     }
     input[type="text"] {
       @include font-text;
-      display:inline-block;
-      border:none;
-      width:60%;
-      line-height:42px;
-      height:42px;
-      padding:0 12px;
+        display:inline-block;
+        border:none;
+        line-height:42px;
+        height:42px;
+        padding:0 12px;
     }
     input[type="submit"] {
       @extend .button;
@@ -65,30 +58,49 @@
       margin-right:$margin;
     }
   }
-  > .close {
-    position:absolute;
-    top:0;
-    right:0;
-  }
 
-  &.active {
-    > h4,> .description {
-      opacity:0;
-      width:0;
-      padding-right:0;
-      padding-left:0;
+  @include respond-to(desktop) {
+
+    &:hover {
+      background:lighten($darkGrey,10%);
     }
-    >form {
+    > h4, > .description,> form{
+      padding:$margin 0 $margin $margin;
+      height:120px;
+      @include prefix(transition,width $duration, padding $duration, opacity $duration);
+    }
+    > h4 {width:25%;}
+    > .description {width:40%;}
+    > form {
+      width:35%;
+      input[type="text"] {width:60%;}
+    }
+    > .close {
+      position:absolute;
+      top:0;
+      right:0;
+    }
 
-      input[type="text"] {
-        width:30%;
-      }
-
-      width:100%;
-      input[type="submit"] {
-        pointer-events:none;
+    &.active {
+      > h4,> .description {
         opacity:0;
+        width:0;
+        padding-right:0;
+        padding-left:0;
+      }
+      >form {
+
+        input[type="text"] {
+          width:30%;
+        }
+
+        width:100%;
+        input[type="submit"] {
+          pointer-events:none;
+          opacity:0;
+        }
       }
     }
+
   }
 }

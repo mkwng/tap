@@ -9,6 +9,9 @@
   h3,p,ul {
     margin:0 auto $margin;
     max-width:720px;
+    @include respond-to(tablet) {
+      margin:0 $margin $margin;
+    }
   }
   *:last-child {
     margin-bottom:$margin/4;
@@ -52,11 +55,13 @@
       float:left;
       margin:0 $margin $margin 0;
       max-width:$colWidth;
+      @include respond-to(phone) {margin:0 $margin; width:100%;max-width:100%;}
     }
     &.right {
       float:right;
       margin:0 0 $margin $margin;
       max-width:$colWidth;
+      @include respond-to(phone) {margin:0 $margin; width:100%;max-width:100%;}
     }
   }
   img {
@@ -90,6 +95,7 @@
   background:#ffffff;
   padding:$margin*2;
   font-weight:400;
+  @include respond-to(phone) {padding:$margin;}
 
   .question {
     font-weight:700;
