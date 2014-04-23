@@ -19,6 +19,7 @@
   div.sidenote {
     margin-left:0;
     font-size:14px;
+    @include respond-to(phone) {padding-left:$margin;padding-right:$margin}
 
     > p {
       display:block;
@@ -43,6 +44,7 @@
     &.full {
       width:100%;
       margin:$margin*2 0 $margin*2 0;
+      @include respond-to(phone) {padding-left:$margin;padding-right:$margin}
       > p {
         margin:0;
         padding:0;
@@ -95,7 +97,7 @@
   background:#ffffff;
   padding:$margin*2;
   font-weight:400;
-  @include respond-to(phone) {padding:$margin;}
+  @include respond-to(phone) {padding:0;}
 
   .question {
     font-weight:700;

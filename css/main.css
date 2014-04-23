@@ -504,7 +504,7 @@ section.about {
       width: 0; } }
 
 .nav-wrapper.active {
-  width: 300px; }
+  width: 320px; }
   .nav-wrapper.active nav ul.nav-primary li > span {
     opacity: 0; }
   .nav-wrapper.active nav ul.nav-primary li a::before {
@@ -598,10 +598,10 @@ section.about {
       text-indent: -9999999em;
       width: 100%;
       height: 100%;
-      background-image: url(../img/logo-long.png);
-      background-size: 240px;
       background-repeat: no-repeat;
-      background-position: 50% 50%; }
+      background-position: 50% 50%;
+      background-size: 80px;
+      background-image: url(../img/logo.png); }
       #hamburger h1 span:hover {
         background-color: #fdfdfd; }
   @media only screen and (max-width: 798px) {
@@ -1487,10 +1487,10 @@ section.events, section.articles {
         font-size: 24px; } }
     @media only screen and (max-width: 798px) {
       .hero h3, .image-parallax h3 {
-        font-size: 56px; } }
+        font-size: 48px; } }
     @media only screen and (max-width: 480px) {
       .hero h3, .image-parallax h3 {
-        font-size: 48px; } }
+        font-size: 32px; } }
   .hero h4, .image-parallax h4 {
     color: #333333;
     font-weight: 300;
@@ -1694,6 +1694,10 @@ section.events, section.articles {
   .article-intro div.sidenote, .boxes .box .box-hidden div.sidenote, .article-body div.sidenote, .event-body div.sidenote {
     margin-left: 0;
     font-size: 14px; }
+    @media only screen and (max-width: 480px) {
+      .article-intro div.sidenote, .boxes .box .box-hidden div.sidenote, .article-body div.sidenote, .event-body div.sidenote {
+        padding-left: 24px;
+        padding-right: 24px; } }
     .article-intro div.sidenote > p, .boxes .box .box-hidden div.sidenote > p, .article-body div.sidenote > p, .event-body div.sidenote > p {
       display: block;
       border-left: 3px solid #009c83;
@@ -1712,6 +1716,10 @@ section.events, section.articles {
     .article-intro div.sidenote.full, .boxes .box .box-hidden div.sidenote.full, .article-body div.sidenote.full, .event-body div.sidenote.full {
       width: 100%;
       margin: 48px 0 48px 0; }
+      @media only screen and (max-width: 480px) {
+        .article-intro div.sidenote.full, .boxes .box .box-hidden div.sidenote.full, .article-body div.sidenote.full, .event-body div.sidenote.full {
+          padding-left: 24px;
+          padding-right: 24px; } }
       .article-intro div.sidenote.full > p, .boxes .box .box-hidden div.sidenote.full > p, .article-body div.sidenote.full > p, .event-body div.sidenote.full > p {
         margin: 0;
         padding: 0;
@@ -1778,7 +1786,7 @@ section.events, section.articles {
   font-weight: 400; }
   @media only screen and (max-width: 480px) {
     .article-body, .event-body {
-      padding: 24px; } }
+      padding: 0; } }
   .article-body .question, .event-body .question {
     font-weight: 700;
     margin-bottom: 0; }
@@ -1862,7 +1870,8 @@ section.events, section.articles {
       padding-left: 174px; } }
   @media only screen and (max-width: 480px) {
     .events .article-text {
-      padding-left: 99px; } }
+      padding-left: 99px;
+      padding-right: 24px; } }
   .events .article-text .article-img {
     height: 152px;
     width: 152px;
@@ -1877,8 +1886,7 @@ section.events, section.articles {
         width: 102px; } }
     @media only screen and (max-width: 480px) {
       .events .article-text .article-img {
-        height: 102px;
-        width: 102px; } }
+        display: none; } }
     .events .article-text .article-img a {
       display: block;
       width: 100%;
@@ -1894,7 +1902,7 @@ section.events, section.articles {
   .event-details .left, .event-details .right {
     float: left;
     width: 49.999%;
-    height: 400px;
+    height: 300px;
     text-align: center;
     position: relative; }
     @media only screen and (max-width: 480px) {
@@ -1930,8 +1938,30 @@ section.events, section.articles {
       .event-details .left a:hover {
         opacity: .8; }
   .event-details .right .details {
-    font-size: 24px;
+    color: #333333;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
     margin-bottom: 24px; }
+    @media only screen and (max-width: 798px) {
+      .event-details .right .details {
+        font-size: 16px; } }
+    @media only screen and (max-width: 480px) {
+      .event-details .right .details {
+        font-size: 14px; } }
+    @media only screen and (max-width: 798px) {
+      .event-details .right .details {
+        font-size: 20px; } }
+    @media only screen and (max-width: 480px) {
+      .event-details .right .details {
+        font-size: 18px; } }
 
 .event-body {
   background-color: #f0f0f0; }
