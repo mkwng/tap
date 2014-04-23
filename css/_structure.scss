@@ -21,6 +21,7 @@ section.events,section.articles {
     }
     @include respond-to(phone) {
       width:100%;
+      padding:0;
     }
   }
   .right {
@@ -210,6 +211,7 @@ section.events,section.articles {
         float:left;
         margin-right:$margin;
         margin-bottom:0;
+        @include respond-to(phone) {width:$colWidth/4;height:$colWidth/4;margin-right:$margin/3}
       }
       h4 {
         font-size:22px;

@@ -653,7 +653,8 @@ section.events, section.articles {
         padding-right: 24px; } }
     @media only screen and (max-width: 480px) {
       section.events .left, section.articles .left {
-        width: 100%; } }
+        width: 100%;
+        padding: 0; } }
   section.events .right, section.articles .right {
     position: absolute;
     top: 0;
@@ -901,6 +902,11 @@ section.events, section.articles {
         float: left;
         margin-right: 24px;
         margin-bottom: 0; }
+        @media only screen and (max-width: 480px) {
+          section.events .section-page article .article-img, section.events .section-page article.col-2 .article-img, section.articles .section-page article .article-img, section.articles .section-page article.col-2 .article-img {
+            width: 75px;
+            height: 75px;
+            margin-right: 8px; } }
       section.events .section-page article h4, section.events .section-page article.col-2 h4, section.articles .section-page article h4, section.articles .section-page article.col-2 h4 {
         font-size: 22px;
         font-weight: 500; }
