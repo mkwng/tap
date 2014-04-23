@@ -1,6 +1,7 @@
 section.events,section.articles {
   width:100%;
   overflow:hidden;
+  position:relative;
 
   .article-text {
     @include font-text;
@@ -9,21 +10,33 @@ section.events,section.articles {
   .left {
     position:relative;
     overflow:hidden;
-    width:70%;
     float:left;
     background-color:#f0f0f0;
-    padding:$margin $margin $margin*2;
+    padding:$margin 300px+$margin $margin*2 $margin;
+    width:100%;
+    // padding-right:300px;
+    @include respond-to(tablet) {
+      width:70%;
+      padding-right:$margin;
+    }
     @include respond-to(phone) {
       width:100%;
     }
   }
   .right {
-    position:relative;
+    position:absolute;
+    top:0;
+    right:0;
     overflow:hidden;
-    width:30%;
-    float:left;
+    width:300px;
     background:#dddddd;
     padding:$margin;
+
+    @include respond-to(tablet) {
+      position:relative;
+      float:left;
+      width:30%;
+    }
     @include respond-to(phone) {
       display:none;
     }
@@ -242,7 +255,13 @@ section.events,section.articles {
   .section-sidebar {
     padding-top:40px;
     .sidebar-list {
-      // @include font-alt;
+      @include font-text;
+      // list-style: numbered;
+      list-style:decimal;
+      li {
+        list-style:decimal;
+        margin-left:$margin;
+      }
     }
   }
 }
@@ -386,4 +405,9 @@ section.events,section.articles {
       @include gradient(rgba(0,0,0,0),rgba(0,0,0,.75),0deg);
     }
   }
+}
+
+
+.toggle:not(.active) {
+  display:none;
 }

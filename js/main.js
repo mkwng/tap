@@ -51,7 +51,7 @@ $(".nav-wrapper").hover(
   }
 );
 
-$("#hamburger").click(function() {
+$("#hamburger a:first").click(function() {
   $(".nav-wrapper").toggleClass("active");
   return false;
 });

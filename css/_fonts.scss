@@ -44,12 +44,13 @@ $textDark-light: #999999;
 }
 
 @mixin font-label {
+  font-family:"Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color:$text-light;
   text-transform:uppercase;
   letter-spacing:.1em;
   font-weight:700;
   font-size:12px;
-  font-family:"Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  // @include respond-to(tablet) {font-size:11px;}
   // @include respond-to(phone) {font-size:10px;}
 }
 @mixin font-label-large {

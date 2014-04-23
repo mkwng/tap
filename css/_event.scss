@@ -60,11 +60,9 @@
         }
       }
       h4 {
-        @include font-title;
         margin-bottom:$margin/4;
       }
       p.text-subtitle {
-        @include font-label;
         margin-bottom:$margin/4;  
       }
   }
@@ -160,4 +158,8 @@
   max-width:720px;
   margin:0 auto;
   padding:$margin*2 0 $margin 0;
+  @include respond-to(tablet) {
+    margin-left:$margin;
+    margin-right:$margin;
+  }
 }
