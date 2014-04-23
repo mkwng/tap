@@ -2,6 +2,10 @@ section.events,section.articles {
   width:100%;
   overflow:hidden;
 
+  .article-text {
+    @include font-text;
+  }
+
   .left {
     position:relative;
     overflow:hidden;
