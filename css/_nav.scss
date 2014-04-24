@@ -197,6 +197,8 @@
     }
   }
   + #container {
+    pointer-events:none;
+    overflow:hidden;
     &::after {
       pointer-events:auto;
       opacity:1;

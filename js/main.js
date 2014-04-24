@@ -57,6 +57,7 @@ $("#hamburger a:first").click(function() {
 });
 
 $("a.close").click(function() {
+  clearTimeout(navHover);
   $(this).closest(".active").removeClass("active");
   return false;
 });

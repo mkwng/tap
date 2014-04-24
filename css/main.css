@@ -552,9 +552,12 @@ section.about {
   .nav-wrapper.active nav ul.nav-secondary {
     pointer-events: auto;
     opacity: 1; }
-  .nav-wrapper.active + #container::after {
-    pointer-events: auto;
-    opacity: 1; }
+  .nav-wrapper.active + #container {
+    pointer-events: none;
+    overflow: hidden; }
+    .nav-wrapper.active + #container::after {
+      pointer-events: auto;
+      opacity: 1; }
 
 #hamburger {
   position: relative;
