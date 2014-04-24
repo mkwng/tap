@@ -56,6 +56,11 @@ $("#hamburger a:first").click(function() {
   return false;
 });
 
+$("a.close").click(function() {
+  $(".nav-wrapper").removeClass("active");
+  return false;
+});
+
 $(".section-controls a.next").click(function() {
   var $t = $(this);
   $t.parent().siblings(".section-list").css("transform","translate3d(-650px,0,0)");

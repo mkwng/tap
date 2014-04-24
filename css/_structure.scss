@@ -68,6 +68,7 @@ section.events,section.articles {
     float:right;
     font-size:0;
     margin-right:$margin;
+    @include respond-to(tablet) {display:none;}
     a {
       display:inline-block;
       line-height:48px;

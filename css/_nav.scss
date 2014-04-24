@@ -42,6 +42,16 @@
         }
       }
     }
+    a.close{
+      display:none;
+      height:64px;
+      position:absolute;
+      line-height:64px;
+      top:0;
+      right:10px;
+      @include font-label-small;
+      @include respond-to(phone) {display:block;}
+    }
     ul.nav-primary {
       display:block;
       height:($navWidth) * 3;
@@ -170,7 +180,7 @@
     }
     h1 span{
         width:$navWidth*3;
-        background-size:85%;
+        background-size:65%;
         background-image:url(../img/logo-long.png);
     }
     ul.nav-secondary {

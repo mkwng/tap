@@ -315,8 +315,7 @@ section.about {
   section.about p {
     color: rgba(255, 255, 255, 0.8);
     margin: 0 auto 48px auto;
-    width: 80%;
-    min-width: 400px; }
+    width: 80%; }
   section.about .button, section.about section.events .more, section.events section.about .more, section.about section.articles .more, section.articles section.about .more, section.about .newsletter > form input[type="submit"], .newsletter > form section.about input[type="submit"], section.about .social a > form input[type="submit"], .social a > form section.about input[type="submit"] {
     background: #ffffff;
     color: #73e1de; }
@@ -375,6 +374,26 @@ section.about {
         background-position: 50% 50%; }
         .nav-wrapper nav h1 span:hover {
           background-color: #fdfdfd; }
+    .nav-wrapper nav a.close {
+      display: none;
+      height: 64px;
+      position: absolute;
+      line-height: 64px;
+      top: 0;
+      right: 10px;
+      font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      color: #999999;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      font-size: 12px;
+      font-size: 9px; }
+      @media only screen and (max-width: 480px) {
+        .nav-wrapper nav a.close {
+          font-size: 8px; } }
+      @media only screen and (max-width: 480px) {
+        .nav-wrapper nav a.close {
+          display: block; } }
     .nav-wrapper nav ul.nav-primary {
       display: block;
       height: 300px;
@@ -515,7 +534,7 @@ section.about {
     transform: translate3d(0, 10px, 0); }
   .nav-wrapper.active nav h1 span {
     width: 300px;
-    background-size: 85%;
+    background-size: 65%;
     background-image: url(../img/logo-long.png); }
   .nav-wrapper.active nav ul.nav-secondary {
     pointer-events: auto;
@@ -726,6 +745,9 @@ section.events, section.articles {
     float: right;
     font-size: 0;
     margin-right: 24px; }
+    @media only screen and (max-width: 798px) {
+      section.events .section-controls, section.articles .section-controls {
+        display: none; } }
     section.events .section-controls a, section.articles .section-controls a {
       display: inline-block;
       line-height: 48px;
