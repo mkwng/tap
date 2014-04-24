@@ -680,8 +680,6 @@ section.events, section.articles {
     @media only screen and (max-width: 480px) {
       section.events .full-width, section.articles .full-width {
         padding: 12px 12px 24px; } }
-    section.events .full-width .article-text, section.articles .full-width .article-text {
-      padding: 0; }
   section.events h2, section.articles h2 {
     color: #333333;
     font-weight: 300;
@@ -785,12 +783,16 @@ section.events, section.articles {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     clear: both;
+    overflow: hidden;
     width: 10000px;
     -webkit-transition: all 300ms;
     -moz-transition: all 300ms;
     -ms-transition: all 300ms;
     -o-transition: all 300ms;
     transition: all 300ms; }
+    @media only screen and (max-width: 798px) {
+      section.events .section-list, section.events .section-page, section.events section.articles .section-page, section.articles section.events .section-page, section.articles .section-list, section.articles section.events .section-page, section.events section.articles .section-page, section.articles .section-page {
+        width: 100%; } }
     section.events .section-list article, section.events .section-page article, section.events section.articles .section-page article, section.articles section.events .section-page article, section.articles .section-list article, section.articles section.events .section-page article, section.events section.articles .section-page article, section.articles .section-page article {
       float: left;
       width: 300px;
@@ -802,6 +804,13 @@ section.events, section.articles {
       -ms-transition: background 300ms;
       -o-transition: background 300ms;
       transition: background 300ms; }
+      @media only screen and (max-width: 798px) {
+        section.events .section-list article, section.events .section-page article, section.events section.articles .section-page article, section.articles section.events .section-page article, section.articles .section-list article, section.articles section.events .section-page article, section.events section.articles .section-page article, section.articles .section-page article {
+          width: 50%;
+          margin-right: 0; } }
+      @media only screen and (max-width: 480px) {
+        section.events .section-list article, section.events .section-page article, section.events section.articles .section-page article, section.articles section.events .section-page article, section.articles .section-list article, section.articles section.events .section-page article, section.events section.articles .section-page article, section.articles .section-page article {
+          width: 100%; } }
       section.events .section-list article:hover, section.events .section-page article:hover, section.events section.articles .section-page article:hover, section.articles section.events .section-page article:hover, section.articles .section-list article:hover, section.articles section.events .section-page article:hover, section.events section.articles .section-page article:hover, section.articles .section-page article:hover {
         background: rgba(255, 255, 255, 0.5); }
       section.events .section-list article .article-img, section.events .section-page article .article-img, section.events section.articles .section-page article .article-img, section.articles section.events .section-page article .article-img, section.articles .section-list article .article-img, section.articles section.events .section-page article .article-img, section.events section.articles .section-page article .article-img, section.articles .section-page article .article-img {
@@ -841,11 +850,14 @@ section.events, section.articles {
       background: #404040;
       width: 624px;
       color: #999999; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 798px) {
         section.events .section-list article.col-2, section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles section.events .section-page article.col-2, section.articles .section-list article.col-2, section.articles section.events .section-page article.col-2, section.events section.articles .section-page article.col-2, section.articles .section-page article.col-2 {
-          max-width: 432px; } }
+          width: 100%;
+          margin-right: 0; } }
       section.events .section-list article.col-2:hover, section.events .section-page article.col-2:hover, section.events section.articles .section-page article.col-2:hover, section.articles section.events .section-page article.col-2:hover, section.articles .section-list article.col-2:hover, section.articles section.events .section-page article.col-2:hover, section.events section.articles .section-page article.col-2:hover, section.articles .section-page article.col-2:hover {
         background: #383838; }
+      section.events .section-list article.col-2 p, section.events .section-page article.col-2 p, section.events section.articles .section-page article.col-2 p, section.articles section.events .section-page article.col-2 p, section.articles .section-list article.col-2 p, section.articles section.events .section-page article.col-2 p, section.events section.articles .section-page article.col-2 p, section.articles .section-page article.col-2 p {
+        color: #999999; }
       section.events .section-list article.col-2 .article-img, section.events .section-page article.col-2 .article-img, section.events section.articles .section-page article.col-2 .article-img, section.articles section.events .section-page article.col-2 .article-img, section.articles .section-list article.col-2 .article-img, section.articles section.events .section-page article.col-2 .article-img, section.events section.articles .section-page article.col-2 .article-img, section.articles .section-page article.col-2 .article-img {
         width: 48%;
         height: 276px;
@@ -1868,39 +1880,6 @@ section.events, section.articles {
   @media only screen and (max-width: 480px) {
     .events .date {
       font-size: 24px; } }
-.events .article-text {
-  padding-top: 24px;
-  padding-left: 224px; }
-  @media only screen and (max-width: 798px) {
-    .events .article-text {
-      padding-left: 174px; } }
-  @media only screen and (max-width: 480px) {
-    .events .article-text {
-      padding-left: 99px;
-      padding-right: 24px; } }
-  .events .article-text .article-img {
-    height: 152px;
-    width: 152px;
-    margin: 0 24px 0;
-    float: right;
-    overflow: hidden;
-    background-position: 50% 50%;
-    background-size: cover; }
-    @media only screen and (max-width: 798px) {
-      .events .article-text .article-img {
-        height: 102px;
-        width: 102px; } }
-    @media only screen and (max-width: 480px) {
-      .events .article-text .article-img {
-        display: none; } }
-    .events .article-text .article-img a {
-      display: block;
-      width: 100%;
-      height: 100%; }
-  .events .article-text h4 {
-    margin-bottom: 6px; }
-  .events .article-text p.text-subtitle {
-    margin-bottom: 6px; }
 
 .event-details {
   position: relative;

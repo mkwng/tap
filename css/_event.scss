@@ -32,39 +32,39 @@
     @include respond-to(tablet) {font-size:40px;}
     @include respond-to(phone) {font-size:24px;}
   }
-  .article-text {
-    padding-top:$margin;
-    padding-left:$colWidth/1.5+$margin;
-    @include respond-to(tablet) {padding-left:$colWidth/2+$margin;}
-    @include respond-to(phone) {padding-left:$colWidth/4+$margin;padding-right:$margin}
-      .article-img {
-        height:$articleHeight/1.5-$margin*2;
-        width:$colWidth/1.5-$margin*2;
-        margin:0 $margin 0;
-        float:right;
-        overflow:hidden;
-        background-position:50% 50%;
-        background-size:cover;
-        @include respond-to(tablet) {
-          height:$articleHeight/2-$margin*2;
-          width:$colWidth/2-$margin*2;
-        }
-        @include respond-to(phone) {
-          display:none;
-        }
-        a {
-          display:block;
-          width:100%;
-          height:100%;
-        }
-      }
-      h4 {
-        margin-bottom:$margin/4;
-      }
-      p.text-subtitle {
-        margin-bottom:$margin/4;  
-      }
-  }
+  // .article-text {
+  //   padding-top:$margin;
+  //   padding-left:$colWidth/1.5+$margin;
+  //   @include respond-to(tablet) {padding-left:$colWidth/2+$margin;}
+  //   @include respond-to(phone) {padding-left:$colWidth/4+$margin;padding-right:$margin}
+  //     .article-img {
+  //       height:$articleHeight/1.5-$margin*2;
+  //       width:$colWidth/1.5-$margin*2;
+  //       margin:0 $margin 0;
+  //       float:right;
+  //       overflow:hidden;
+  //       background-position:50% 50%;
+  //       background-size:cover;
+  //       @include respond-to(tablet) {
+  //         height:$articleHeight/2-$margin*2;
+  //         width:$colWidth/2-$margin*2;
+  //       }
+  //       @include respond-to(phone) {
+  //         display:none;
+  //       }
+  //       a {
+  //         display:block;
+  //         width:100%;
+  //         height:100%;
+  //       }
+  //     }
+  //     h4 {
+  //       margin-bottom:$margin/4;
+  //     }
+  //     p.text-subtitle {
+  //       margin-bottom:$margin/4;  
+  //     }
+  // }
 }
 
 .event-details {

@@ -50,7 +50,7 @@ section.events,section.articles {
     padding:$margin $margin $margin*2;
     @include respond-to(phone) {padding:$margin/2 $margin/2 $margin;}
     .article-text {
-      padding:0;
+      // padding:0;
     }
   }
   h2 {
@@ -121,8 +121,10 @@ section.events,section.articles {
   .section-list {
     @include prefix(transform,translate3d(0,0,0));
     clear:both;
+    overflow:hidden;
     width:10000px;
     @include prefix(transition,all $duration);
+    @include respond-to(tablet) {width:100%;}
     article {
       float:left;
       width:$colWidth;
@@ -130,6 +132,13 @@ section.events,section.articles {
       margin-right:$margin;
       padding:$margin/2;
       @include prefix(transition,background $duration);
+      @include respond-to(tablet) {
+        width:50%;
+        margin-right:0;
+      }
+      @include respond-to(phone) {
+        width:100%;
+      }
       &:hover {
         background:rgba(#ffffff,.5);
       }
@@ -165,12 +174,16 @@ section.events,section.articles {
       width:$colWidth*2 + $margin;
       color:$textDark-light;
 
-      @include respond-to(phone) {
-        max-width:$break-small - ($margin*2);
+      @include respond-to(tablet) {
+        width:100%;
+        margin-right:0;
       }
 
       &:hover {
         background:darken($grey,3%);
+      }
+      p{
+        color:$textDark-light;
       }
       .article-img {
         width:48%;
@@ -185,6 +198,7 @@ section.events,section.articles {
       p.text-subtitle {
         color:$textDark-dark;
       }
+
     }
   }
 
