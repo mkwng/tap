@@ -149,7 +149,7 @@ html {
 body {
   color: #333333;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -161,7 +161,7 @@ body {
   min-height: 100%; }
   @media only screen and (max-width: 798px) {
     body {
-      font-size: 16px; } }
+      font-size: 15px; } }
   @media only screen and (max-width: 480px) {
     body {
       font-size: 14px; } }
@@ -398,6 +398,9 @@ section.about {
       display: block;
       height: 300px;
       margin-bottom: 24px; }
+      @media only screen and (max-width: 798px) {
+        .nav-wrapper nav ul.nav-primary {
+          height: 192px; } }
       .nav-wrapper nav ul.nav-primary li {
         display: block;
         width: 100%;
@@ -427,6 +430,9 @@ section.about {
           @media only screen and (max-width: 480px) {
             .nav-wrapper nav ul.nav-primary li > span {
               font-size: 8px; } }
+        @media only screen and (max-width: 798px) {
+          .nav-wrapper nav ul.nav-primary li {
+            height: 64px; } }
         .nav-wrapper nav ul.nav-primary li.active {
           background: rgba(0, 0, 0, 0.5); }
         .nav-wrapper nav ul.nav-primary li a {
@@ -450,6 +456,9 @@ section.about {
           @media only screen and (max-width: 480px) {
             .nav-wrapper nav ul.nav-primary li a {
               font-size: 12px; } }
+          @media only screen and (max-width: 798px) {
+            .nav-wrapper nav ul.nav-primary li a {
+              line-height: 64px; } }
           .nav-wrapper nav ul.nav-primary li a::before {
             -webkit-transition: transform 300ms ease-out;
             -moz-transition: transform 300ms ease-out;
@@ -502,6 +511,10 @@ section.about {
         height: 48px;
         overflow: hidden;
         line-height: 48px; }
+        @media only screen and (max-width: 480px) {
+          .nav-wrapper nav ul.nav-secondary li {
+            height: 32px;
+            line-height: 32px; } }
         .nav-wrapper nav ul.nav-secondary li a {
           font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
           color: #999999;
@@ -645,7 +658,7 @@ section.events, section.articles {
   section.events .article-text, section.articles .article-text {
     color: #333333;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -655,7 +668,7 @@ section.events, section.articles {
     -moz-osx-font-smoothing: grayscale; }
     @media only screen and (max-width: 798px) {
       section.events .article-text, section.articles .article-text {
-        font-size: 16px; } }
+        font-size: 15px; } }
     @media only screen and (max-width: 480px) {
       section.events .article-text, section.articles .article-text {
         font-size: 14px; } }
@@ -987,7 +1000,7 @@ section.events, section.articles {
     section.events .section-sidebar .sidebar-list, section.articles .section-sidebar .sidebar-list {
       color: #333333;
       font-weight: 300;
-      font-size: 18px;
+      font-size: 16px;
       font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
@@ -998,7 +1011,7 @@ section.events, section.articles {
       list-style: decimal; }
       @media only screen and (max-width: 798px) {
         section.events .section-sidebar .sidebar-list, section.articles .section-sidebar .sidebar-list {
-          font-size: 16px; } }
+          font-size: 15px; } }
       @media only screen and (max-width: 480px) {
         section.events .section-sidebar .sidebar-list, section.articles .section-sidebar .sidebar-list {
           font-size: 14px; } }
@@ -1011,7 +1024,7 @@ section.events, section.articles {
   .boxes .box {
     color: #333333;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -1024,7 +1037,7 @@ section.events, section.articles {
     vertical-align: top; }
     @media only screen and (max-width: 798px) {
       .boxes .box {
-        font-size: 16px; } }
+        font-size: 15px; } }
     @media only screen and (max-width: 480px) {
       .boxes .box {
         font-size: 14px; } }
@@ -1614,7 +1627,7 @@ section.events, section.articles {
   .newsletter > .description, .social a > .description {
     color: #333333;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -1628,7 +1641,7 @@ section.events, section.articles {
     letter-spacing: .06em; }
     @media only screen and (max-width: 798px) {
       .newsletter > .description, .social a > .description {
-        font-size: 16px; } }
+        font-size: 15px; } }
     @media only screen and (max-width: 480px) {
       .newsletter > .description, .social a > .description {
         font-size: 14px; } }
@@ -1646,7 +1659,7 @@ section.events, section.articles {
   .newsletter > form input[type="text"], .social a > form input[type="text"] {
     color: #333333;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -1661,7 +1674,7 @@ section.events, section.articles {
     padding: 0 12px; }
     @media only screen and (max-width: 798px) {
       .newsletter > form input[type="text"], .social a > form input[type="text"] {
-        font-size: 16px; } }
+        font-size: 15px; } }
     @media only screen and (max-width: 480px) {
       .newsletter > form input[type="text"], .social a > form input[type="text"] {
         font-size: 14px; } }
@@ -1678,7 +1691,23 @@ section.events, section.articles {
     width: 42px;
     height: 42px;
     border: none;
-    margin-right: 24px; }
+    margin-right: 24px;
+    position: relative; }
+    .newsletter > form input[type="submit"]::after, .social a > form input[type="submit"]::after {
+      display: block;
+      content: "";
+      width: 21px;
+      height: 21px;
+      border-right: 1px solid #ffffff;
+      border-top: 1px solid #ffffff;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 10px;
+      left: 10px;
+      position: absolute; }
   @media only screen and (min-width: 799px) {
     .newsletter:hover, .social a:hover {
       background: #1a1a1a; }
@@ -1947,7 +1976,7 @@ section.events, section.articles {
   .event-details .right .details {
     color: #333333;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -1959,7 +1988,7 @@ section.events, section.articles {
     margin-bottom: 24px; }
     @media only screen and (max-width: 798px) {
       .event-details .right .details {
-        font-size: 16px; } }
+        font-size: 15px; } }
     @media only screen and (max-width: 480px) {
       .event-details .right .details {
         font-size: 14px; } }
@@ -2093,7 +2122,7 @@ footer {
   footer p.description {
     color: #333333;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -2109,7 +2138,7 @@ footer {
     padding-right: 48px; }
     @media only screen and (max-width: 798px) {
       footer p.description {
-        font-size: 16px; } }
+        font-size: 15px; } }
     @media only screen and (max-width: 480px) {
       footer p.description {
         font-size: 14px; } }

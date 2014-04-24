@@ -56,6 +56,19 @@
       height:42px;
       border:none;
       margin-right:$margin;
+      position:relative;
+      &::after {
+        display:block;
+        content:"";
+        width:21px;
+        height:21px;
+        border-right:1px solid #ffffff;
+        border-top:1px solid #ffffff;
+        @include prefix(transform,rotate(45deg));
+        top:10px;
+        left:10px;
+        position:absolute;
+      }
     }
   }
 

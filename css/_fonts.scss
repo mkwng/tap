@@ -68,10 +68,10 @@ $textDark-light: #999999;
 @mixin font-text {
   color:$text;
   font-weight:300;
-  font-size:18px;
+  font-size:16px;
   font-family:"Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
   @include pretty-text;
-  @include respond-to(tablet) {font-size:16px;}
+  @include respond-to(tablet) {font-size:15px;}
   @include respond-to(phone) {font-size:14px;}
 }
 @mixin font-text-large {

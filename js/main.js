@@ -57,7 +57,7 @@ $("#hamburger a:first").click(function() {
 });
 
 $("a.close").click(function() {
-  $(".nav-wrapper").removeClass("active");
+  $(this).closest(".active").removeClass("active");
   return false;
 });
 

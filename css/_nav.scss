@@ -56,6 +56,7 @@
       display:block;
       height:($navWidth) * 3;
       margin-bottom:$margin;
+      @include respond-to(tablet) {height:64px*3;}
       li {
         > span {
           @include font-label-small;   
@@ -74,6 +75,9 @@
         position:relative;
         height:$navWidth;
         // padding:0 10px 10px 10px;
+        @include respond-to(tablet) {
+          height:64px;
+        }
         &.active {
           background:rgba(#000000,.5);
         }
@@ -86,6 +90,9 @@
           position:relative;
           line-height:$navWidth;
           text-indent:$navWidth;
+          @include respond-to(tablet) {
+            line-height:64px;
+          }
 
           &::before {
             @include prefix(transition,transform $duration ease-out);   
@@ -136,6 +143,7 @@
         height:48px;
         overflow:hidden;
         line-height:48px;
+        @include respond-to(phone) {height:32px;line-height:32px;}
         a {
           @include font-label;
           opacity:.5;
