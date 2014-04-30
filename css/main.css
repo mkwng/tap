@@ -1589,12 +1589,16 @@ section.events, section.articles {
   background: black;
   color: #ffffff;
   font-size: 0;
-  transition: background .2s; }
+  transition: background .2s;
+  text-align: center; }
   .newsletter > h4, .social a > h4, .newsletter > .description, .social a > .description, .newsletter > form, .social a > form {
     padding: 12px;
     display: inline-block;
     overflow: hidden;
-    vertical-align: middle; }
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    max-width: 520px; }
   .newsletter > h4, .social a > h4 {
     color: #333333;
     font-weight: 300;
@@ -1654,69 +1658,59 @@ section.events, section.articles {
     @media only screen and (max-width: 480px) {
       .newsletter > .description, .social a > .description {
         font-size: 11px; } }
-  .newsletter > form input, .social a > form input {
-    vertical-align: middle; }
-    .newsletter > form input:focus, .social a > form input:focus {
-      outline: none;
-      border: 3px solid #00c4b5; }
-  .newsletter > form input[type="text"], .social a > form input[type="text"] {
-    color: #333333;
-    font-weight: 300;
-    font-size: 16px;
-    font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: inline-block;
-    border: none;
-    line-height: 42px;
-    height: 42px;
-    padding: 0 12px; }
-    @media only screen and (max-width: 798px) {
-      .newsletter > form input[type="text"], .social a > form input[type="text"] {
-        font-size: 15px; } }
-    @media only screen and (max-width: 480px) {
-      .newsletter > form input[type="text"], .social a > form input[type="text"] {
-        font-size: 14px; } }
-  .newsletter > form input[type="submit"], .social a > form input[type="submit"] {
-    font-size: 0;
-    text-indent: -9999999em;
-    -webkit-transition: opacity 300ms;
-    -moz-transition: opacity 300ms;
-    -ms-transition: opacity 300ms;
-    -o-transition: opacity 300ms;
-    transition: opacity 300ms;
-    padding: 0;
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    border: none;
-    margin-right: 24px;
-    position: relative; }
-    .newsletter > form input[type="submit"]::after, .social a > form input[type="submit"]::after {
-      display: block;
-      content: "";
-      width: 21px;
-      height: 21px;
-      border-right: 1px solid #ffffff;
-      border-top: 1px solid #ffffff;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      top: 10px;
-      left: 10px;
-      position: absolute; }
+  .newsletter > form, .social a > form {
+    width: 100%;
+    margin-bottom: 12px; }
+    .newsletter > form input, .social a > form input {
+      vertical-align: middle; }
+      .newsletter > form input:focus, .social a > form input:focus {
+        outline: none;
+        border: 3px solid #00c4b5; }
+    .newsletter > form input[type="text"], .social a > form input[type="text"] {
+      color: #333333;
+      font-weight: 300;
+      font-size: 16px;
+      font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width: 75%;
+      display: inline-block;
+      border: none;
+      line-height: 42px;
+      height: 42px;
+      padding: 0 12px; }
+      @media only screen and (max-width: 798px) {
+        .newsletter > form input[type="text"], .social a > form input[type="text"] {
+          font-size: 15px; } }
+      @media only screen and (max-width: 480px) {
+        .newsletter > form input[type="text"], .social a > form input[type="text"] {
+          font-size: 14px; } }
+    .newsletter > form input.fname, .social a > form input.fname, .newsletter > form input.lname, .social a > form input.lname {
+      display: none; }
+    .newsletter > form input[type="submit"], .social a > form input[type="submit"] {
+      -webkit-transition: opacity 300ms;
+      -moz-transition: opacity 300ms;
+      -ms-transition: opacity 300ms;
+      -o-transition: opacity 300ms;
+      transition: opacity 300ms;
+      padding: 0;
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      border: none;
+      margin-right: 24px;
+      position: relative; }
   @media only screen and (min-width: 799px) {
     .newsletter:hover, .social a:hover {
       background: #1a1a1a; }
     .newsletter > h4, .social a > h4, .newsletter > .description, .social a > .description, .newsletter > form, .social a > form {
       padding: 24px 0 24px 24px;
       height: 120px;
+      text-align: left;
       -webkit-transition: width 300ms, padding 300ms, opacity 300ms;
       -moz-transition: width 300ms, padding 300ms, opacity 300ms;
       -ms-transition: width 300ms, padding 300ms, opacity 300ms;
@@ -1727,6 +1721,7 @@ section.events, section.articles {
     .newsletter > .description, .social a > .description {
       width: 40%; }
     .newsletter > form, .social a > form {
+      margin-bottom: 0;
       width: 35%; }
       .newsletter > form input[type="text"], .social a > form input[type="text"] {
         width: 60%; }
@@ -1740,12 +1735,17 @@ section.events, section.articles {
       padding-right: 0;
       padding-left: 0; }
     .newsletter.active > form, .social a.active > form {
-      width: 100%; }
+      text-align: right;
+      width: 100%;
+      max-width: 9999px;
+      font-size: 0; }
       .newsletter.active > form input[type="text"], .social a.active > form input[type="text"] {
-        width: 30%; }
+        width: 30%;
+        margin-right: 3%; }
       .newsletter.active > form input[type="submit"], .social a.active > form input[type="submit"] {
-        pointer-events: none;
-        opacity: 0; } }
+        width: 100px; }
+    .newsletter.active input.fname, .social a.active input.fname, .newsletter.active input.lname, .social a.active input.lname {
+      display: inline-block; } }
 
 .article-intro, .boxes .box .box-hidden, .article-body, .event-body {
   padding: 72px 96px;
