@@ -1689,8 +1689,6 @@ section.events, section.articles {
       @media only screen and (max-width: 480px) {
         .newsletter > form input[type="text"], .social a > form input[type="text"] {
           font-size: 14px; } }
-    .newsletter > form input.fname, .social a > form input.fname, .newsletter > form input.lname, .social a > form input.lname {
-      display: none; }
     .newsletter > form input[type="submit"], .social a > form input[type="submit"] {
       -webkit-transition: opacity 300ms;
       -moz-transition: opacity 300ms;
@@ -1704,6 +1702,42 @@ section.events, section.articles {
       border: none;
       margin-right: 24px;
       position: relative; }
+    .newsletter > form input.hide, .social a > form input.hide, .newsletter > form .hide, .social a > form .hide {
+      display: none; }
+    .newsletter > form h5, .social a > form h5 {
+      color: #333333;
+      font-weight: 300;
+      font-size: 16px;
+      font-family: "Lato","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #999999;
+      width: 40%;
+      text-align: left; }
+      @media only screen and (max-width: 798px) {
+        .newsletter > form h5, .social a > form h5 {
+          font-size: 15px; } }
+      @media only screen and (max-width: 480px) {
+        .newsletter > form h5, .social a > form h5 {
+          font-size: 14px; } }
+    .newsletter > form .checkboxes, .social a > form .checkboxes {
+      font-family: "Gotham","Montserrat","Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic","Century Gothic", CenturyGothic, AppleGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      color: #999999;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      font-size: 12px;
+      font-size: 9px;
+      color: #999999;
+      width: 60%;
+      text-align: left; }
+      @media only screen and (max-width: 480px) {
+        .newsletter > form .checkboxes, .social a > form .checkboxes {
+          font-size: 8px; } }
   @media only screen and (min-width: 799px) {
     .newsletter:hover, .social a:hover {
       background: #1a1a1a; }
@@ -1722,7 +1756,8 @@ section.events, section.articles {
       width: 40%; }
     .newsletter > form, .social a > form {
       margin-bottom: 0;
-      width: 35%; }
+      width: 35%;
+      height: auto; }
       .newsletter > form input[type="text"], .social a > form input[type="text"] {
         width: 60%; }
     .newsletter > .close, .social a > .close {
@@ -1744,7 +1779,7 @@ section.events, section.articles {
         margin-right: 3%; }
       .newsletter.active > form input[type="submit"], .social a.active > form input[type="submit"] {
         width: 100px; }
-    .newsletter.active input.fname, .social a.active input.fname, .newsletter.active input.lname, .social a.active input.lname {
+    .newsletter.active .hide, .social a.active .hide {
       display: inline-block; } }
 
 .article-intro, .boxes .box .box-hidden, .article-body, .event-body {

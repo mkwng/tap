@@ -52,9 +52,7 @@
       height:42px;
       padding:0 12px;
     }
-    input.fname, input.lname{
-      display:none;
-    }
+
     input[type="submit"] {
       @extend .button;
       @include prefix(transition,opacity $duration);
@@ -67,6 +65,22 @@
       margin-right:$margin;
       position:relative;
     }
+    input.hide, .hide{
+      display:none;
+    }
+    h5 {
+      @include font-text;
+      color:$textDark-light;
+      width:40%;
+      text-align:left;
+    }
+    .checkboxes {
+      @include font-label-small;
+      color:$textDark-light;
+      width:60%;
+      text-align:left;
+    }
+
   }
 
   @include respond-to(desktop) {
@@ -85,6 +99,7 @@
     > form {
       margin-bottom:0;
       width:35%;
+      height:auto;
       input[type="text"] {width:60%;}
     }
     > .close {
@@ -114,7 +129,10 @@
           width:100px;
         }
       }
-      input.fname, input.lname{
+      h5 {
+        
+      }
+      .hide{
         display:inline-block;
       }
     }
